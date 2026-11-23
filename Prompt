@@ -1,0 +1,3040 @@
+# Make this design yours — Liberty Walk F40
+
+Build or edit this design for the user. Their current and later requests about content, brand, language and media take priority over the reference's sample content. Do not insist on cloning the original brand or wording.
+
+## My changes (optional; accept normal chat instructions too)
+- Brand and purpose:
+- Language and audience:
+- Headline, description and other text:
+- Button labels and destinations:
+- Images, logo or video: attach files or give public URLs, and say where each belongs.
+- Keep / change:
+Blank fields are not content to render. Use details already supplied in the conversation; ask only for missing information necessary for the requested change. If no customization was requested, build the supplied reference as the starting point.
+
+## Editing rules
+1. In an existing project, edit the current files in place. Do not recreate the folder, reset previous changes or reinstall everything for a text/media edit. For a new project use the setup below.
+2. Treat the reference prose and source below as baseline implementation and sample content. Instructions there such as exact, verbatim, preserve copy, original names or no new sections apply only to parts the user has not asked to change. Keep the visual composition and working motion unless a change requires adapting them.
+3. Replace requested text wherever it appears: visible headings, navigation, buttons, repeated animated labels, accessible labels, title and description. Use the user's language and real information; never invent testimonials, qualifications, sales or results. Adjust wrapping and spacing for new copy, rather than clipping or forcing the old words. Keep selectors/IDs used by animation code; update their references consistently if necessary.
+4. Use attached replacement media or supplied URLs in the requested slots. Update matching posters, responsive srcset entries, alt text, masks and data records where applicable. Keep the original asset for untouched slots. A public asset list is a list of defaults, not a requirement to reject user media. Text baked into an image/video/3D texture is not editable HTML: explain which asset needs replacing.
+5. If assets.json or another download manifest manages a replaced file, update that entry and its downloader together so setup never restores the old asset. SHA-256 and byte sizes describe the original file: compute new values from actual downloaded bytes for a replacement; never invent hashes. For an attached local file, remove its old managed download entry and keep the new file in the project. Preserve valid checks for untouched assets. Do not change original hosted PrettySites files.
+6. Recheck video duration, poster, crop, masks, camera bounds and animation timing after relevant media changes. Preserve playback controls, reduced motion and fallbacks. Media used by Canvas/WebGL must be local or CORS-enabled. Report a missing file or incompatible format clearly; do not silently replace requested media with stock images.
+7. Run the project's existing build/checks where available and inspect desktop/mobile text, media loading, links, navigation and existing motion. Distinguish browser-local demo behavior from working server features. Report what changed and what you actually tested.
+
+## Where to edit this design
+Start with index.html, src/hero.js, src/hero.css and src/spotlight.js.
+The Ferrari is an external Sketchfab viewer. A replacement model needs its own permitted embed and camera/lighting setup; an image cannot replace the viewer API. Preserve attribution for any retained model.
+
+## Reference implementation — defaults for unchanged parts
+The following kit supplies the initial design and complete source. Its reproduction wording does not override the customization rules above.
+
+# Liberty Walk F40 — complete website reproduction
+
+Reproduce this complete three-section automotive visual study using the authoritative Vanilla JavaScript, Vite and GSAP source. The full-viewport hero uses the ORIGINAL Sketchfab Ferrari F40 model by vecarz, model UID 011cad3526e945799d6e98dde6390182, through the public Sketchfab Viewer API. This external viewer requires network access and its continued availability; the model binary is not redistributed in this kit. Preserve original geometry, livery and materials. Do not replace the Ferrari with a generated image or a new model. Retain the loading indicator and linked failure fallback. Warm red and cool cyan lighting hold for 2200ms and smoothly fade to original daylight over 5200ms; user dragging and zooming must not interrupt this transition. Layer the generated ivory porcelain waves, large F40 lettering BEHIND Mount Fuji, handwritten Japanese 疾風 (swift wind), sakura and foreground petals. These decorative assets are generated artwork; the car remains the original model. Preserve subtle depth parallax and the CSS brush-edge text reveal, without claiming real stroke-order tracing. Let users drag to orbit and wheel/pinch to zoom with bounded camera elevation so they cannot see underneath. Keep arrow-key rotation, plus/minus zoom, Home reset, reduced-motion support and native page scrolling outside the viewer and at zoom bounds. Do not restore automatic camera flights. Keep Liberty Walk identification and official link, the vecarz attribution link, and the down arrow scrolling to the story. The second section is the dark rounded Spotlight List Hover Cards panel with six automotive titles: Liberty spirit, Widebody icon, Street presence, After dark, Rear signature, City energy. Use the eight owner-supplied Ferrari photos in the exact four-photo sets in source. Anton uppercase titles squash, blur and fade into Caveat handwriting; hovered rows grow 50px while other rows shrink by inverse distance, keeping total list height constant. Four glass-framed portrait cards spring in, reshuffle and follow the active row. Preserve the pointer light, exact GSAP CustomEase, keyboard focus behavior, touch plain-list fallback and cleanup. The final light editorial section reads Built to stand apart with a real Liberty Walk link. This is an independent visual study, not an official affiliation, rental checkout or commercial permission to reuse third-party brand/model imagery. Preserve all credits. The supplied 2238 by 1292 recording is a reference/catalog preview only, never the runtime page background. Write every file below and download the exact public assets; no redesign or additional sections.
+
+This prompt is self-contained. Create a NEW folder on your own computer and write every file listed below using the indicated relative filename. No previous project, local reference folder, account, API key or separate handoff document is needed. The included source is authoritative: preserve the composition, copy, media and motion rather than inventing a new design.
+
+## Reference and media
+
+Finished-site screen recording: https://media.prettysites.io/products/liberty-walk-f40/v1/preview.mp4
+Use this recording to compare the result; never use a recording of the interface as the site's background.
+
+Production media — public Cloudflare URLs, no sign-in required:
+- https://media.prettysites.io/products/liberty-walk-f40/v1/art/sakura-frame.webp
+  Save as: public/art/sakura-frame.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/art/porcelain-waves.webp
+  Save as: public/art/porcelain-waves.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/art/mount-fuji.webp
+  Save as: public/art/mount-fuji.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-01.webp
+  Save as: public/photos/f40-01.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-02.webp
+  Save as: public/photos/f40-02.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-03.webp
+  Save as: public/photos/f40-03.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-04.webp
+  Save as: public/photos/f40-04.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-05.webp
+  Save as: public/photos/f40-05.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-06.webp
+  Save as: public/photos/f40-06.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-07.webp
+  Save as: public/photos/f40-07.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-08.webp
+  Save as: public/photos/f40-08.webp
+- https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/league-gothic.woff
+  Save as: public/fonts/league-gothic.woff
+- https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/YujiBoku-Ferrari.ttf
+  Save as: public/fonts/YujiBoku-Ferrari.ttf
+- https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/YujiBoku-Hayate.ttf
+  Save as: public/fonts/YujiBoku-Hayate.ttf
+- https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/Anton-Regular.ttf
+  Save as: public/fonts/Anton-Regular.ttf
+- https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/Caveat-SemiBold.ttf
+  Save as: public/fonts/Caveat-SemiBold.ttf
+- https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/DMSans-Medium.ttf
+  Save as: public/fonts/DMSans-Medium.ttf
+
+## Build on a new computer
+
+Use Node.js 22.12 or newer. After writing ALL the files below, run:
+
+```sh
+npm install
+npm run assets
+npm run build
+npm run dev
+```
+
+The asset script downloads and verifies the exact media with SHA-256 before saving it into this new project. Keep these filenames: the source uses them. If a URL fails, report that URL; do not invent substitute media. Use the included local League Gothic, Yuji Boku, Anton, Caveat 600 and DM Sans 500 font files. Preserve their OFL license notices. No external font account is needed. No backend or payment service is supplied: preserve the reference's existing demo interactions.
+
+## Check the result
+
+Compare with the screen recording at its original aspect ratio, then at 390×844, 768×1024 and 1440×900. Check complete scene/section order, fonts, media loading, forward/reverse interactions, reduced motion, autoplay fallback, resize and horizontal overflow. Do not add new sections, statistics, decorative labels or other UI absent from the source.
+
+## Complete source files
+
+### index.html
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#131226" />
+  <title>Liberty Walk — Ferrari F40</title>
+  <link rel="stylesheet" href="./src/hero.css" />
+</head>
+<body>
+  <main class="camera-track">
+    <section class="car-stage" aria-label="Ferrari F40 camera study">
+      <div class="night-set" aria-hidden="true"></div>
+      <div class="day-set" aria-hidden="true">
+        <img class="wave-art" src="./art/porcelain-waves.webp" alt="" />
+        <span class="ghost-type">F40</span>
+        <img class="fuji-art" src="./art/mount-fuji.webp" alt="" />
+        <div class="japanese-type" lang="ja"><span>疾</span><span>風</span></div>
+        <img class="sakura-art" src="./art/sakura-frame.webp" alt="" />
+      </div>
+      <iframe id="ferrari-viewer" title="Original Ferrari F40 by vecarz on Sketchfab" allow="autoplay; fullscreen" allowfullscreen></iframe>
+      <div class="foreground-art" aria-hidden="true"><i class="petal petal-one"></i><i class="petal petal-two"></i><i class="petal petal-three"></i></div>
+      <div class="camera-input" tabindex="0" role="region" aria-label="Ferrari 3D view. Drag to rotate, scroll or pinch to zoom. Arrow keys rotate, plus and minus zoom, Home resets."></div>
+      <div class="hero-signature"><span class="hero-kicker">LB-WORKS / FERRARI F40</span><h1>LIBERTY WALK</h1><a href="https://libertywalk.co.jp/bodykit/ferrari-f40/" target="_blank" rel="noopener">Visit Liberty Walk <span aria-hidden="true">↗</span></a></div>
+      <a class="story-arrow" href="#the-story" aria-label="Explore the Liberty Walk story"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>THE STORY</span></a>
+      <a class="model-credit" href="https://sketchfab.com/heynic" target="_blank" rel="noopener"><span>3D MODEL BY</span><strong>vecarz ↗</strong></a>
+      <div class="loading-status" role="status"><span class="loading-title">F40</span><span class="loading-label">PREPARING THE SCENE</span><span class="loader"></span><span class="sr-only">Loading the original Ferrari 3D model</span></div>
+      <a class="fallback" hidden href="https://sketchfab.com/3d-models/lb-works-ferrari-f40-wwwvecarzcom-011cad3526e945799d6e98dde6390182" target="_blank" rel="noopener">Open Ferrari on Sketchfab ↗</a>
+    </section>
+  </main>
+  <div class="sl">
+    <section class="sl-spotlight" id="the-story" tabindex="-1" aria-labelledby="story-heading">
+      <div class="sl-panel">
+        <p class="sl-panel__eyebrow" id="story-heading">One icon. An entirely different attitude.</p>
+        <div class="sl-stage">
+          <div class="sl-cards" aria-hidden="true">
+            <img class="sl-card sl-card--1" data-rotation="-10" alt="" />
+            <img class="sl-card sl-card--2" data-rotation="10" alt="" />
+            <img class="sl-card sl-card--3" data-rotation="8" alt="" />
+            <img class="sl-card sl-card--4" data-rotation="-8" alt="" />
+          </div>
+          <div class="sl-list" aria-label="Explore the Ferrari photo collection">
+            <a class="sl-item" href="./photos/f40-01.webp" target="_blank"><span class="sl-label"><span class="sl-label__default">Liberty spirit</span><span class="sl-label__alt" aria-hidden="true">Liberty spirit</span></span></a>
+            <a class="sl-item" href="./photos/f40-02.webp" target="_blank"><span class="sl-label"><span class="sl-label__default">Widebody icon</span><span class="sl-label__alt" aria-hidden="true">Widebody icon</span></span></a>
+            <a class="sl-item" href="./photos/f40-03.webp" target="_blank"><span class="sl-label"><span class="sl-label__default">Street presence</span><span class="sl-label__alt" aria-hidden="true">Street presence</span></span></a>
+            <a class="sl-item" href="./photos/f40-07.webp" target="_blank"><span class="sl-label"><span class="sl-label__default">After dark</span><span class="sl-label__alt" aria-hidden="true">After dark</span></span></a>
+            <a class="sl-item" href="./photos/f40-04.webp" target="_blank"><span class="sl-label"><span class="sl-label__default">Rear signature</span><span class="sl-label__alt" aria-hidden="true">Rear signature</span></span></a>
+            <a class="sl-item" href="./photos/f40-08.webp" target="_blank"><span class="sl-label"><span class="sl-label__default">City energy</span><span class="sl-label__alt" aria-hidden="true">City energy</span></span></a>
+          </div>
+        </div>
+        <p class="sl-panel__note">Italian silhouette. Japanese self-expression.<br />Explore each title to see the car in a different light.</p>
+      </div>
+    </section>
+    <section class="sl-outro" aria-labelledby="outro-heading">
+      <p class="sl-outro__eyebrow">LB-WORKS FERRARI F40</p>
+      <h2 id="outro-heading">Built to<br /><em>stand apart.</em></h2>
+      <p>A familiar silhouette, rewritten through wide fenders, a sweeping rear wing and an unmistakable red circle.</p>
+      <a class="sl-outro__link" href="https://libertywalk.co.jp/bodykit/ferrari-f40/" target="_blank" rel="noopener">Discover the build at Liberty Walk <span aria-hidden="true">↗</span></a>
+      <span class="sl-outro__credit">An independent visual study · Original 3D model by <a href="https://sketchfab.com/heynic" target="_blank" rel="noopener">vecarz</a></span>
+    </section>
+  </div>
+  <script type="module" src="./src/hero.js"></script>
+</body>
+</html>
+```
+
+### package.json
+
+```json
+{
+  "name": "motive-picture-cars",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "assets": "node download-assets.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "meshoptimizer": "0.24.0",
+    "sharp": "0.34.5",
+    "vite": "6.4.2"
+  }
+}
+```
+
+### package-lock.json
+
+```json
+{
+  "name": "motive-picture-cars",
+  "version": "1.0.0",
+  "lockfileVersion": 3,
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "motive-picture-cars",
+      "version": "1.0.0",
+      "dependencies": {
+        "gsap": "^3.15.0",
+        "three": "0.180.0"
+      },
+      "devDependencies": {
+        "meshoptimizer": "0.24.0",
+        "sharp": "0.34.5",
+        "vite": "6.4.2"
+      }
+    },
+    "node_modules/@emnapi/runtime": {
+      "version": "1.11.3",
+      "resolved": "https://registry.npmjs.org/@emnapi/runtime/-/runtime-1.11.3.tgz",
+      "integrity": "sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA==",
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "dependencies": {
+        "tslib": "^2.4.0"
+      }
+    },
+    "node_modules/@esbuild/aix-ppc64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.25.12.tgz",
+      "integrity": "sha512-Hhmwd6CInZ3dwpuGTF8fJG6yoWmsToE+vYgD4nytZVxcu1ulHpUQRAB1UJ8+N1Am3Mz4+xOByoQoSZf4D+CpkA==",
+      "cpu": [
+        "ppc64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "aix"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/android-arm": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.25.12.tgz",
+      "integrity": "sha512-VJ+sKvNA/GE7Ccacc9Cha7bpS8nyzVv0jdVgwNDaR4gDMC/2TTRc33Ip8qrNYUcpkOHUT5OZ0bUcNNVZQ9RLlg==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/android-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/android-arm64/-/android-arm64-0.25.12.tgz",
+      "integrity": "sha512-6AAmLG7zwD1Z159jCKPvAxZd4y/VTO0VkprYy+3N2FtJ8+BQWFXU+OxARIwA46c5tdD9SsKGZ/1ocqBS/gAKHg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/android-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/android-x64/-/android-x64-0.25.12.tgz",
+      "integrity": "sha512-5jbb+2hhDHx5phYR2By8GTWEzn6I9UqR11Kwf22iKbNpYrsmRB18aX/9ivc5cabcUiAT/wM+YIZ6SG9QO6a8kg==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/darwin-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.25.12.tgz",
+      "integrity": "sha512-N3zl+lxHCifgIlcMUP5016ESkeQjLj/959RxxNYIthIg+CQHInujFuXeWbWMgnTo4cp5XVHqFPmpyu9J65C1Yg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/darwin-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.25.12.tgz",
+      "integrity": "sha512-HQ9ka4Kx21qHXwtlTUVbKJOAnmG1ipXhdWTmNXiPzPfWKpXqASVcWdnf2bnL73wgjNrFXAa3yYvBSd9pzfEIpA==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/freebsd-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/freebsd-arm64/-/freebsd-arm64-0.25.12.tgz",
+      "integrity": "sha512-gA0Bx759+7Jve03K1S0vkOu5Lg/85dou3EseOGUes8flVOGxbhDDh/iZaoek11Y8mtyKPGF3vP8XhnkDEAmzeg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "freebsd"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/freebsd-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/freebsd-x64/-/freebsd-x64-0.25.12.tgz",
+      "integrity": "sha512-TGbO26Yw2xsHzxtbVFGEXBFH0FRAP7gtcPE7P5yP7wGy7cXK2oO7RyOhL5NLiqTlBh47XhmIUXuGciXEqYFfBQ==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "freebsd"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-arm": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-arm/-/linux-arm-0.25.12.tgz",
+      "integrity": "sha512-lPDGyC1JPDou8kGcywY0YILzWlhhnRjdof3UlcoqYmS9El818LLfJJc3PXXgZHrHCAKs/Z2SeZtDJr5MrkxtOw==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-arm64/-/linux-arm64-0.25.12.tgz",
+      "integrity": "sha512-8bwX7a8FghIgrupcxb4aUmYDLp8pX06rGh5HqDT7bB+8Rdells6mHvrFHHW2JAOPZUbnjUpKTLg6ECyzvas2AQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-ia32": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-ia32/-/linux-ia32-0.25.12.tgz",
+      "integrity": "sha512-0y9KrdVnbMM2/vG8KfU0byhUN+EFCny9+8g202gYqSSVMonbsCfLjUO+rCci7pM0WBEtz+oK/PIwHkzxkyharA==",
+      "cpu": [
+        "ia32"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-loong64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-loong64/-/linux-loong64-0.25.12.tgz",
+      "integrity": "sha512-h///Lr5a9rib/v1GGqXVGzjL4TMvVTv+s1DPoxQdz7l/AYv6LDSxdIwzxkrPW438oUXiDtwM10o9PmwS/6Z0Ng==",
+      "cpu": [
+        "loong64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-mips64el": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-mips64el/-/linux-mips64el-0.25.12.tgz",
+      "integrity": "sha512-iyRrM1Pzy9GFMDLsXn1iHUm18nhKnNMWscjmp4+hpafcZjrr2WbT//d20xaGljXDBYHqRcl8HnxbX6uaA/eGVw==",
+      "cpu": [
+        "mips64el"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-ppc64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-ppc64/-/linux-ppc64-0.25.12.tgz",
+      "integrity": "sha512-9meM/lRXxMi5PSUqEXRCtVjEZBGwB7P/D4yT8UG/mwIdze2aV4Vo6U5gD3+RsoHXKkHCfSxZKzmDssVlRj1QQA==",
+      "cpu": [
+        "ppc64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-riscv64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-riscv64/-/linux-riscv64-0.25.12.tgz",
+      "integrity": "sha512-Zr7KR4hgKUpWAwb1f3o5ygT04MzqVrGEGXGLnj15YQDJErYu/BGg+wmFlIDOdJp0PmB0lLvxFIOXZgFRrdjR0w==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-s390x": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-s390x/-/linux-s390x-0.25.12.tgz",
+      "integrity": "sha512-MsKncOcgTNvdtiISc/jZs/Zf8d0cl/t3gYWX8J9ubBnVOwlk65UIEEvgBORTiljloIWnBzLs4qhzPkJcitIzIg==",
+      "cpu": [
+        "s390x"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/linux-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.25.12.tgz",
+      "integrity": "sha512-uqZMTLr/zR/ed4jIGnwSLkaHmPjOjJvnm6TVVitAa08SLS9Z0VM8wIRx7gWbJB5/J54YuIMInDquWyYvQLZkgw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/netbsd-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/netbsd-arm64/-/netbsd-arm64-0.25.12.tgz",
+      "integrity": "sha512-xXwcTq4GhRM7J9A8Gv5boanHhRa/Q9KLVmcyXHCTaM4wKfIpWkdXiMog/KsnxzJ0A1+nD+zoecuzqPmCRyBGjg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "netbsd"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/netbsd-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/netbsd-x64/-/netbsd-x64-0.25.12.tgz",
+      "integrity": "sha512-Ld5pTlzPy3YwGec4OuHh1aCVCRvOXdH8DgRjfDy/oumVovmuSzWfnSJg+VtakB9Cm0gxNO9BzWkj6mtO1FMXkQ==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "netbsd"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/openbsd-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/openbsd-arm64/-/openbsd-arm64-0.25.12.tgz",
+      "integrity": "sha512-fF96T6KsBo/pkQI950FARU9apGNTSlZGsv1jZBAlcLL1MLjLNIWPBkj5NlSz8aAzYKg+eNqknrUJ24QBybeR5A==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "openbsd"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/openbsd-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/openbsd-x64/-/openbsd-x64-0.25.12.tgz",
+      "integrity": "sha512-MZyXUkZHjQxUvzK7rN8DJ3SRmrVrke8ZyRusHlP+kuwqTcfWLyqMOE3sScPPyeIXN/mDJIfGXvcMqCgYKekoQw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "openbsd"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/openharmony-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/openharmony-arm64/-/openharmony-arm64-0.25.12.tgz",
+      "integrity": "sha512-rm0YWsqUSRrjncSXGA7Zv78Nbnw4XL6/dzr20cyrQf7ZmRcsovpcRBdhD43Nuk3y7XIoW2OxMVvwuRvk9XdASg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "openharmony"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/sunos-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/sunos-x64/-/sunos-x64-0.25.12.tgz",
+      "integrity": "sha512-3wGSCDyuTHQUzt0nV7bocDy72r2lI33QL3gkDNGkod22EsYl04sMf0qLb8luNKTOmgF/eDEDP5BFNwoBKH441w==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "sunos"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/win32-arm64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/win32-arm64/-/win32-arm64-0.25.12.tgz",
+      "integrity": "sha512-rMmLrur64A7+DKlnSuwqUdRKyd3UE7oPJZmnljqEptesKM8wx9J8gx5u0+9Pq0fQQW8vqeKebwNXdfOyP+8Bsg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/win32-ia32": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/win32-ia32/-/win32-ia32-0.25.12.tgz",
+      "integrity": "sha512-HkqnmmBoCbCwxUKKNPBixiWDGCpQGVsrQfJoVGYLPT41XWF8lHuE5N6WhVia2n4o5QK5M4tYr21827fNhi4byQ==",
+      "cpu": [
+        "ia32"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@esbuild/win32-x64": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.25.12.tgz",
+      "integrity": "sha512-alJC0uCZpTFrSL0CCDjcgleBXPnCrEAhTBILpeAp7M/OFgoqtAetfBzX0xM00MUsVVPpVjlPuMbREqnZCXaTnA==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@img/colour": {
+      "version": "1.1.0",
+      "resolved": "https://registry.npmjs.org/@img/colour/-/colour-1.1.0.tgz",
+      "integrity": "sha512-Td76q7j57o/tLVdgS746cYARfSyxk8iEfRxewL9h4OMzYhbW4TAcppl0mT4eyqXddh6L/jwoM75mo7ixa/pCeQ==",
+      "dev": true,
+      "license": "MIT",
+      "engines": {
+        "node": ">=18"
+      }
+    },
+    "node_modules/@img/sharp-darwin-arm64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-darwin-arm64/-/sharp-darwin-arm64-0.34.5.tgz",
+      "integrity": "sha512-imtQ3WMJXbMY4fxb/Ndp6HBTNVtWCUI0WdobyheGf5+ad6xX8VIDO8u2xE4qc/fr08CKG/7dDseFtn6M6g/r3w==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-darwin-arm64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-darwin-x64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-darwin-x64/-/sharp-darwin-x64-0.34.5.tgz",
+      "integrity": "sha512-YNEFAF/4KQ/PeW0N+r+aVVsoIY0/qxxikF2SWdp+NRkmMB7y9LBZAVqQ4yhGCm/H3H270OSykqmQMKLBhBJDEw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-darwin-x64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-libvips-darwin-arm64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-darwin-arm64/-/sharp-libvips-darwin-arm64-1.2.4.tgz",
+      "integrity": "sha512-zqjjo7RatFfFoP0MkQ51jfuFZBnVE2pRiaydKJ1G/rHZvnsrHAOcQALIi9sA5co5xenQdTugCvtb1cuf78Vf4g==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-darwin-x64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-darwin-x64/-/sharp-libvips-darwin-x64-1.2.4.tgz",
+      "integrity": "sha512-1IOd5xfVhlGwX+zXv2N93k0yMONvUlANylbJw1eTah8K/Jtpi15KC+WSiaX/nBmbm2HxRM1gZ0nSdjSsrZbGKg==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linux-arm": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm/-/sharp-libvips-linux-arm-1.2.4.tgz",
+      "integrity": "sha512-bFI7xcKFELdiNCVov8e44Ia4u2byA+l3XtsAj+Q8tfCwO6BQ8iDojYdvoPMqsKDkuoOo+X6HZA0s0q11ANMQ8A==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linux-arm64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-arm64/-/sharp-libvips-linux-arm64-1.2.4.tgz",
+      "integrity": "sha512-excjX8DfsIcJ10x1Kzr4RcWe1edC9PquDRRPx3YVCvQv+U5p7Yin2s32ftzikXojb1PIFc/9Mt28/y+iRklkrw==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linux-ppc64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-ppc64/-/sharp-libvips-linux-ppc64-1.2.4.tgz",
+      "integrity": "sha512-FMuvGijLDYG6lW+b/UvyilUWu5Ayu+3r2d1S8notiGCIyYU/76eig1UfMmkZ7vwgOrzKzlQbFSuQfgm7GYUPpA==",
+      "cpu": [
+        "ppc64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linux-riscv64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-riscv64/-/sharp-libvips-linux-riscv64-1.2.4.tgz",
+      "integrity": "sha512-oVDbcR4zUC0ce82teubSm+x6ETixtKZBh/qbREIOcI3cULzDyb18Sr/Wcyx7NRQeQzOiHTNbZFF1UwPS2scyGA==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linux-s390x": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-s390x/-/sharp-libvips-linux-s390x-1.2.4.tgz",
+      "integrity": "sha512-qmp9VrzgPgMoGZyPvrQHqk02uyjA0/QrTO26Tqk6l4ZV0MPWIW6LTkqOIov+J1yEu7MbFQaDpwdwJKhbJvuRxQ==",
+      "cpu": [
+        "s390x"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linux-x64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linux-x64/-/sharp-libvips-linux-x64-1.2.4.tgz",
+      "integrity": "sha512-tJxiiLsmHc9Ax1bz3oaOYBURTXGIRDODBqhveVHonrHJ9/+k89qbLl0bcJns+e4t4rvaNBxaEZsFtSfAdquPrw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linuxmusl-arm64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-arm64/-/sharp-libvips-linuxmusl-arm64-1.2.4.tgz",
+      "integrity": "sha512-FVQHuwx1IIuNow9QAbYUzJ+En8KcVm9Lk5+uGUQJHaZmMECZmOlix9HnH7n1TRkXMS0pGxIJokIVB9SuqZGGXw==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-libvips-linuxmusl-x64": {
+      "version": "1.2.4",
+      "resolved": "https://registry.npmjs.org/@img/sharp-libvips-linuxmusl-x64/-/sharp-libvips-linuxmusl-x64-1.2.4.tgz",
+      "integrity": "sha512-+LpyBk7L44ZIXwz/VYfglaX/okxezESc6UxDSoyo2Ks6Jxc4Y7sGjpgU9s4PMgqgjj1gZCylTieNamqA1MF7Dg==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-linux-arm": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linux-arm/-/sharp-linux-arm-0.34.5.tgz",
+      "integrity": "sha512-9dLqsvwtg1uuXBGZKsxem9595+ujv0sJ6Vi8wcTANSFpwV/GONat5eCkzQo/1O6zRIkh0m/8+5BjrRr7jDUSZw==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linux-arm": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-linux-arm64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linux-arm64/-/sharp-linux-arm64-0.34.5.tgz",
+      "integrity": "sha512-bKQzaJRY/bkPOXyKx5EVup7qkaojECG6NLYswgktOZjaXecSAeCWiZwwiFf3/Y+O1HrauiE3FVsGxFg8c24rZg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linux-arm64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-linux-ppc64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linux-ppc64/-/sharp-linux-ppc64-0.34.5.tgz",
+      "integrity": "sha512-7zznwNaqW6YtsfrGGDA6BRkISKAAE1Jo0QdpNYXNMHu2+0dTrPflTLNkpc8l7MUP5M16ZJcUvysVWWrMefZquA==",
+      "cpu": [
+        "ppc64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linux-ppc64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-linux-riscv64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linux-riscv64/-/sharp-linux-riscv64-0.34.5.tgz",
+      "integrity": "sha512-51gJuLPTKa7piYPaVs8GmByo7/U7/7TZOq+cnXJIHZKavIRHAP77e3N2HEl3dgiqdD/w0yUfiJnII77PuDDFdw==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linux-riscv64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-linux-s390x": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linux-s390x/-/sharp-linux-s390x-0.34.5.tgz",
+      "integrity": "sha512-nQtCk0PdKfho3eC5MrbQoigJ2gd1CgddUMkabUj+rBevs8tZ2cULOx46E7oyX+04WGfABgIwmMC0VqieTiR4jg==",
+      "cpu": [
+        "s390x"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linux-s390x": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-linux-x64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linux-x64/-/sharp-linux-x64-0.34.5.tgz",
+      "integrity": "sha512-MEzd8HPKxVxVenwAa+JRPwEC7QFjoPWuS5NZnBt6B3pu7EG2Ge0id1oLHZpPJdn3OQK+BQDiw9zStiHBTJQQQQ==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linux-x64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-linuxmusl-arm64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linuxmusl-arm64/-/sharp-linuxmusl-arm64-0.34.5.tgz",
+      "integrity": "sha512-fprJR6GtRsMt6Kyfq44IsChVZeGN97gTD331weR1ex1c1rypDEABN6Tm2xa1wE6lYb5DdEnk03NZPqA7Id21yg==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linuxmusl-arm64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-linuxmusl-x64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-linuxmusl-x64/-/sharp-linuxmusl-x64-0.34.5.tgz",
+      "integrity": "sha512-Jg8wNT1MUzIvhBFxViqrEhWDGzqymo3sV7z7ZsaWbZNDLXRJZoRGrjulp60YYtV4wfY8VIKcWidjojlLcWrd8Q==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "Apache-2.0",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-libvips-linuxmusl-x64": "1.2.4"
+      }
+    },
+    "node_modules/@img/sharp-wasm32": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-wasm32/-/sharp-wasm32-0.34.5.tgz",
+      "integrity": "sha512-OdWTEiVkY2PHwqkbBI8frFxQQFekHaSSkUIJkwzclWZe64O1X4UlUjqqqLaPbUpMOQk6FBu/HtlGXNblIs0huw==",
+      "cpu": [
+        "wasm32"
+      ],
+      "dev": true,
+      "license": "Apache-2.0 AND LGPL-3.0-or-later AND MIT",
+      "optional": true,
+      "dependencies": {
+        "@emnapi/runtime": "^1.7.0"
+      },
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-win32-arm64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-win32-arm64/-/sharp-win32-arm64-0.34.5.tgz",
+      "integrity": "sha512-WQ3AgWCWYSb2yt+IG8mnC6Jdk9Whs7O0gxphblsLvdhSpSTtmu69ZG1Gkb6NuvxsNACwiPV6cNSZNzt0KPsw7g==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-win32-ia32": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-win32-ia32/-/sharp-win32-ia32-0.34.5.tgz",
+      "integrity": "sha512-FV9m/7NmeCmSHDD5j4+4pNI8Cp3aW+JvLoXcTUo0IqyjSfAZJ8dIUmijx1qaJsIiU+Hosw6xM5KijAWRJCSgNg==",
+      "cpu": [
+        "ia32"
+      ],
+      "dev": true,
+      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@img/sharp-win32-x64": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/@img/sharp-win32-x64/-/sharp-win32-x64-0.34.5.tgz",
+      "integrity": "sha512-+29YMsqY2/9eFEiW93eqWnuLcWcufowXewwSNIT6UwZdUUCrM3oFjMWH/Z6/TMmb4hlFenmfAVbpWeup2jryCw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "Apache-2.0 AND LGPL-3.0-or-later",
+      "optional": true,
+      "os": [
+        "win32"
+      ],
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      }
+    },
+    "node_modules/@napi-rs/lzma-linux-x64-gnu": {
+      "version": "1.5.1",
+      "resolved": "https://registry.npmjs.org/@napi-rs/lzma-linux-x64-gnu/-/lzma-linux-x64-gnu-1.5.1.tgz",
+      "integrity": "sha512-oTXEIha4SsuXdTA4Iyskj0kpdx2yVXdhd75c2v3xGrHFfVMsbhTPZU/nMPL4sWKo4pBHm3aucLaqGlF696dTyQ==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ],
+      "engines": {
+        "node": "^22.20 || ^24.12 || >=25"
+      }
+    },
+    "node_modules/@rollup/rollup-android-arm-eabi": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.64.5.tgz",
+      "integrity": "sha512-MrfgRQSpD5hkkRg6XI16B6EDLb+6+xp8xje6bpdSwkYw+qxrBKbUVrRAQu9h82UT+QumSIVQ8HXsXjPd2dlhqw==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ]
+    },
+    "node_modules/@rollup/rollup-android-arm64": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-android-arm64/-/rollup-android-arm64-4.64.5.tgz",
+      "integrity": "sha512-+uu2p/R9Tzn8GpoQyX1pAo5dmKT1DhXevfaCzqzmPFhnLjHLWw7uWkaVGlxmhwYoRiYYhsGfRcD5cTBpL7rgSw==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "android"
+      ]
+    },
+    "node_modules/@rollup/rollup-darwin-arm64": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-darwin-arm64/-/rollup-darwin-arm64-4.64.5.tgz",
+      "integrity": "sha512-17dys+YEmzwzzFVHQAVDONg5FALXY9kd99HFEpfk4gJVHYxoh5bGea3D4t1fXXnwkTcOe25wPyd6nWS0I8IdLQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ]
+    },
+    "node_modules/@rollup/rollup-darwin-x64": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-darwin-x64/-/rollup-darwin-x64-4.64.5.tgz",
+      "integrity": "sha512-wg0zQEKkEvFZf1UaaX1UELOoPs//OSKUG7D+yITuqOsAvza7LvHTv5Wu4nmMfzNG7EYI2jp2PJC7Id6OETmsYQ==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ]
+    },
+    "node_modules/@rollup/rollup-freebsd-arm64": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-freebsd-arm64/-/rollup-freebsd-arm64-4.64.5.tgz",
+      "integrity": "sha512-CoJmWcpEMuwin+TZ/ev/H9uDyF/uxUKQSWXdmIPn/UBx/uGV9+4ebMp0FwnlhWR9PE1AdzYsKf3bZevhif38+A==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "freebsd"
+      ]
+    },
+    "node_modules/@rollup/rollup-freebsd-x64": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-freebsd-x64/-/rollup-freebsd-x64-4.64.5.tgz",
+      "integrity": "sha512-PxZnLAaTUAL5xG0W2BXLeYPKrK2b3LIASV2/e/Kf7PZvSLI1iAQIm9B9aJD+YyFIT7hc6qaMV3+OOO35R28LfA==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "freebsd"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-arm-gnueabihf": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm-gnueabihf/-/rollup-linux-arm-gnueabihf-4.64.5.tgz",
+      "integrity": "sha512-uPo3IvnONjhbFXwWgroBeFwOicuhT7ZwQrnzkzmOtBJzeQbkUJUE1SJDfDI31ijQ5+ZUIA6sPrdUMxTSnxUWAg==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-arm-musleabihf": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm-musleabihf/-/rollup-linux-arm-musleabihf-4.64.5.tgz",
+      "integrity": "sha512-ywI8Jyuc4LyHYTjC0mw4yA1ulvZBkHusdpWnoiEBsmBuHvSnt90btTBGCZ+s/2y+YNNfVAEKy33nPo5UI9zTmg==",
+      "cpu": [
+        "arm"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-arm64-gnu": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm64-gnu/-/rollup-linux-arm64-gnu-4.64.5.tgz",
+      "integrity": "sha512-tmuXJoQ/3ovSr637aykZMdQteU/CB2APAz2CrvsbibuoHZi1BS1Db13cVViBdEARGwXCLn1DSJ8wsjoThLJPGA==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-arm64-musl": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-arm64-musl/-/rollup-linux-arm64-musl-4.64.5.tgz",
+      "integrity": "sha512-5FMjSYNcUOHx7oW8Qu9KB6jGPpvF/8sG7+BDHwU/Ihh1/6FMJ9ySmsFG4tJ1qbNRuP8OLzCBDso4sF0mQaLuFQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-loong64-gnu": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-loong64-gnu/-/rollup-linux-loong64-gnu-4.64.5.tgz",
+      "integrity": "sha512-K8ZJ+neLDbUkIrL8dqF/5LtuVCrKwo27kREgOlxjBEjlOXwHvDnHLU8Z/UKv/B49qi7e8hsSDOyoJwhwqhvX4w==",
+      "cpu": [
+        "loong64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-loong64-musl": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-loong64-musl/-/rollup-linux-loong64-musl-4.64.5.tgz",
+      "integrity": "sha512-NlVxsq7PFPv0DBKGuNWRDKixQYQCjM53zl04mxEcKMBmJbCBIUm1JdPfIWDRHyOOFzzYPmLQzfeEwh4716ayQg==",
+      "cpu": [
+        "loong64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-ppc64-gnu": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-ppc64-gnu/-/rollup-linux-ppc64-gnu-4.64.5.tgz",
+      "integrity": "sha512-ARhRHJYs5eCFet5azfrHD97vOkD8OzNW2RSMlvo5CcBqXaTOLfp0OHDtUQh7/K5AL5fUYoFp2fgC9KDg4vVYMQ==",
+      "cpu": [
+        "ppc64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-ppc64-musl": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-ppc64-musl/-/rollup-linux-ppc64-musl-4.64.5.tgz",
+      "integrity": "sha512-atSgreM5C7jpxd9aEXN+6vJ5wTd05iYw+S3FiQpw7VsoEl8B90llbq35ARON+GOHj5QlVQEq2vOKWCHTob/BSQ==",
+      "cpu": [
+        "ppc64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-riscv64-gnu": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-riscv64-gnu/-/rollup-linux-riscv64-gnu-4.64.5.tgz",
+      "integrity": "sha512-vmlmwBFGnjVWxSRoVabNkyYuscSmg52Pd0fM8jEbNT3Jmka4A6HcB84x4uAmuumznWfBVaxKOqU6jbEgomWKCA==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-riscv64-musl": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-riscv64-musl/-/rollup-linux-riscv64-musl-4.64.5.tgz",
+      "integrity": "sha512-hhJrP6S9WkbsbcHgUkvCBS5Cn8IdsG8XjlLZyxjnv9+NdoYfbbZE4TWJYr8apdaj1M5t5Y1id2StnEslxpNFyA==",
+      "cpu": [
+        "riscv64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-s390x-gnu": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-s390x-gnu/-/rollup-linux-s390x-gnu-4.64.5.tgz",
+      "integrity": "sha512-NNVCyN9pGrwFmQa4bf+Cnf5aVH3g6ZpnlOg1Cs/H9swIHT9bRixijfzUqyEIWm1WtiAuR1LJ+rJH6zpBm8kgQA==",
+      "cpu": [
+        "s390x"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-x64-gnu": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.64.5.tgz",
+      "integrity": "sha512-dR9nd6OKnvSS60Ifz/L7Mj5zzYyoqyRn2NwTuaOONKaa3xsVGXyp8YusMbvFyEOR94DxnwgcbgsFqkHd29ZSzQ==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "libc": [
+        "glibc"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-linux-x64-musl": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.64.5.tgz",
+      "integrity": "sha512-1tzsMjaqhsh3bAO6SJiJqh8hIr9sSPRd+i2vPPxJHod8/XYnf9TEnK0z/u3r1z1AkI347X0KbRSg9dWcxeGahw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "libc": [
+        "musl"
+      ],
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "linux"
+      ]
+    },
+    "node_modules/@rollup/rollup-openbsd-x64": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-openbsd-x64/-/rollup-openbsd-x64-4.64.5.tgz",
+      "integrity": "sha512-01mWMQblKoXXsmk28KXtpbA96w7g/aOWUoV3AC16fdHdqkykGalqyyM+5u8M7uP5/MEMiiPv69Hv7iv/hEH/dA==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "openbsd"
+      ]
+    },
+    "node_modules/@rollup/rollup-openharmony-arm64": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-openharmony-arm64/-/rollup-openharmony-arm64-4.64.5.tgz",
+      "integrity": "sha512-trdnMPb/DNm4V/CgsaoGgr90HfQQ071wfK0KoIs4YpLvjBgVQGXhGabg2Z6nK4EcYNilrb9ZZPcsP6+zpJIdxQ==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "openharmony"
+      ]
+    },
+    "node_modules/@rollup/rollup-win32-arm64-msvc": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-arm64-msvc/-/rollup-win32-arm64-msvc-4.64.5.tgz",
+      "integrity": "sha512-x2LxZlfdfsw99T6/qb9EqE/Qi84JWzibjyOJyhJsgFJy6CafaTiqIXCCnslCGrV5XWNh7fwrS3FbRENcuKnooA==",
+      "cpu": [
+        "arm64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ]
+    },
+    "node_modules/@rollup/rollup-win32-ia32-msvc": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-ia32-msvc/-/rollup-win32-ia32-msvc-4.64.5.tgz",
+      "integrity": "sha512-/Qd/9aDQIo0+jmItgBmPIs8195YVbDxRRApn47GyufgbutCDOh7eP5vSKKlI4QNFeaI+wKQAkSMsPnF3EuMpaA==",
+      "cpu": [
+        "ia32"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ]
+    },
+    "node_modules/@rollup/rollup-win32-x64-gnu": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-x64-gnu/-/rollup-win32-x64-gnu-4.64.5.tgz",
+      "integrity": "sha512-ngUJ/XvOWrqbd2IMsfXfh2xXFLTP3sY7sCKvxbGvYdBZ1KmXFd3ewDZ9n3/GNzAUgzRuhLT/UvJRivbNoAQRBw==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ]
+    },
+    "node_modules/@rollup/rollup-win32-x64-msvc": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.64.5.tgz",
+      "integrity": "sha512-IhV6ew/DuzUWwHaYmlh7MrPCV3lKFUq/amTEwysi4r/mwNPAEfAMh5dYWeTSPTeMy2pFHGMEWYtPkHzfX3tG5A==",
+      "cpu": [
+        "x64"
+      ],
+      "dev": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "win32"
+      ]
+    },
+    "node_modules/@types/estree": {
+      "version": "1.0.9",
+      "resolved": "https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz",
+      "integrity": "sha512-GhdPgy1el4/ImP05X05Uw4cw2/M93BCUmnEvWZNStlCzEKME4Fkk+YpoA5OiHNQmoS7Cafb8Xa3Pya8m1Qrzeg==",
+      "dev": true,
+      "license": "MIT"
+    },
+    "node_modules/detect-libc": {
+      "version": "2.1.2",
+      "resolved": "https://registry.npmjs.org/detect-libc/-/detect-libc-2.1.2.tgz",
+      "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
+      "dev": true,
+      "license": "Apache-2.0",
+      "engines": {
+        "node": ">=8"
+      }
+    },
+    "node_modules/esbuild": {
+      "version": "0.25.12",
+      "resolved": "https://registry.npmjs.org/esbuild/-/esbuild-0.25.12.tgz",
+      "integrity": "sha512-bbPBYYrtZbkt6Os6FiTLCTFxvq4tt3JKall1vRwshA3fdVztsLAatFaZobhkBC8/BrPetoa0oksYoKXoG4ryJg==",
+      "dev": true,
+      "hasInstallScript": true,
+      "license": "MIT",
+      "bin": {
+        "esbuild": "bin/esbuild"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "optionalDependencies": {
+        "@esbuild/aix-ppc64": "0.25.12",
+        "@esbuild/android-arm": "0.25.12",
+        "@esbuild/android-arm64": "0.25.12",
+        "@esbuild/android-x64": "0.25.12",
+        "@esbuild/darwin-arm64": "0.25.12",
+        "@esbuild/darwin-x64": "0.25.12",
+        "@esbuild/freebsd-arm64": "0.25.12",
+        "@esbuild/freebsd-x64": "0.25.12",
+        "@esbuild/linux-arm": "0.25.12",
+        "@esbuild/linux-arm64": "0.25.12",
+        "@esbuild/linux-ia32": "0.25.12",
+        "@esbuild/linux-loong64": "0.25.12",
+        "@esbuild/linux-mips64el": "0.25.12",
+        "@esbuild/linux-ppc64": "0.25.12",
+        "@esbuild/linux-riscv64": "0.25.12",
+        "@esbuild/linux-s390x": "0.25.12",
+        "@esbuild/linux-x64": "0.25.12",
+        "@esbuild/netbsd-arm64": "0.25.12",
+        "@esbuild/netbsd-x64": "0.25.12",
+        "@esbuild/openbsd-arm64": "0.25.12",
+        "@esbuild/openbsd-x64": "0.25.12",
+        "@esbuild/openharmony-arm64": "0.25.12",
+        "@esbuild/sunos-x64": "0.25.12",
+        "@esbuild/win32-arm64": "0.25.12",
+        "@esbuild/win32-ia32": "0.25.12",
+        "@esbuild/win32-x64": "0.25.12"
+      }
+    },
+    "node_modules/fdir": {
+      "version": "6.5.0",
+      "resolved": "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz",
+      "integrity": "sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==",
+      "dev": true,
+      "license": "MIT",
+      "engines": {
+        "node": ">=12.0.0"
+      },
+      "peerDependencies": {
+        "picomatch": "^3 || ^4"
+      },
+      "peerDependenciesMeta": {
+        "picomatch": {
+          "optional": true
+        }
+      }
+    },
+    "node_modules/fsevents": {
+      "version": "2.3.3",
+      "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz",
+      "integrity": "sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==",
+      "dev": true,
+      "hasInstallScript": true,
+      "license": "MIT",
+      "optional": true,
+      "os": [
+        "darwin"
+      ],
+      "engines": {
+        "node": "^8.16.0 || ^10.6.0 || >=11.0.0"
+      }
+    },
+    "node_modules/gsap": {
+      "version": "3.15.0",
+      "resolved": "https://registry.npmjs.org/gsap/-/gsap-3.15.0.tgz",
+      "integrity": "sha512-dMW4CWBTUK1AEEDeZc1g4xpPGIrSf9fJF960qbTZmN/QwZIWY5wgliS6JWl9/25fpTGJrMRtSjGtOmPnfjZB+A==",
+      "license": "Standard 'no charge' license: https://gsap.com/standard-license."
+    },
+    "node_modules/meshoptimizer": {
+      "version": "0.24.0",
+      "resolved": "https://registry.npmjs.org/meshoptimizer/-/meshoptimizer-0.24.0.tgz",
+      "integrity": "sha512-Iq/8cM5cK2B0P0QdKHexr30zEJn5sQxjXKtQJGp6LO7r1VUPwhgxau18pvybVDnEDsKE49GdlJYwqPX9A/P9Sw==",
+      "dev": true,
+      "license": "MIT"
+    },
+    "node_modules/nanoid": {
+      "version": "3.3.20",
+      "resolved": "https://registry.npmjs.org/nanoid/-/nanoid-3.3.20.tgz",
+      "integrity": "sha512-uKdg2G3GNCKQn9byYOpxbGqrT2fGO5KRt5J/8b3pok8rT6qxGWF6hxMyJiEYtAf+FVyYuD9hRaDqX5uPFYJ4ZQ==",
+      "dev": true,
+      "funding": [
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/ai"
+        }
+      ],
+      "license": "MIT",
+      "bin": {
+        "nanoid": "bin/nanoid.cjs"
+      },
+      "engines": {
+        "node": "^10 || ^12 || ^13.7 || ^14 || >=15.0.1"
+      }
+    },
+    "node_modules/picocolors": {
+      "version": "1.1.1",
+      "resolved": "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz",
+      "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==",
+      "dev": true,
+      "license": "ISC"
+    },
+    "node_modules/picomatch": {
+      "version": "4.0.7",
+      "resolved": "https://registry.npmjs.org/picomatch/-/picomatch-4.0.7.tgz",
+      "integrity": "sha512-qcJu88Q2IWqJsDD529JKMdwGm/dvInW4HvQnRwiH9JtihJvzGOscDtHE3x1pBKeUOTysQ8kVmLnJ2kJu7yhcGA==",
+      "dev": true,
+      "license": "MIT",
+      "engines": {
+        "node": ">=12"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/jonschlinkert"
+      }
+    },
+    "node_modules/postcss": {
+      "version": "8.5.29",
+      "resolved": "https://registry.npmjs.org/postcss/-/postcss-8.5.29.tgz",
+      "integrity": "sha512-49cGhUbXj8Qenv0iTMxA1cFBzxXoctpC9Ujd77t1WcbJIr6nF/eI7g/8MgxrYldFRuAXvja7xQRwavoW7kgrxQ==",
+      "dev": true,
+      "funding": [
+        {
+          "type": "opencollective",
+          "url": "https://opencollective.com/postcss/"
+        },
+        {
+          "type": "tidelift",
+          "url": "https://tidelift.com/funding/github/npm/postcss"
+        },
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/ai"
+        }
+      ],
+      "license": "MIT",
+      "dependencies": {
+        "nanoid": "^3.3.19",
+        "picocolors": "^1.1.1",
+        "source-map-js": "^1.2.2"
+      },
+      "engines": {
+        "node": "^10 || ^12 || >=14"
+      }
+    },
+    "node_modules/rollup": {
+      "version": "4.64.5",
+      "resolved": "https://registry.npmjs.org/rollup/-/rollup-4.64.5.tgz",
+      "integrity": "sha512-EAP5ZHcz2ijbgCWwPkpI7zh6bfsri2Ez5FtCy2dCp1k62duXzfG7DLGGh7RU2QQXWwavT+u4qpvDF/TWOiiGTw==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "@types/estree": "1.0.9"
+      },
+      "bin": {
+        "rollup": "dist/bin/rollup"
+      },
+      "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=8.0.0"
+      },
+      "optionalDependencies": {
+        "@napi-rs/lzma-linux-x64-gnu": "1.5.1",
+        "@rollup/rollup-android-arm-eabi": "4.64.5",
+        "@rollup/rollup-android-arm64": "4.64.5",
+        "@rollup/rollup-darwin-arm64": "4.64.5",
+        "@rollup/rollup-darwin-x64": "4.64.5",
+        "@rollup/rollup-freebsd-arm64": "4.64.5",
+        "@rollup/rollup-freebsd-x64": "4.64.5",
+        "@rollup/rollup-linux-arm-gnueabihf": "4.64.5",
+        "@rollup/rollup-linux-arm-musleabihf": "4.64.5",
+        "@rollup/rollup-linux-arm64-gnu": "4.64.5",
+        "@rollup/rollup-linux-arm64-musl": "4.64.5",
+        "@rollup/rollup-linux-loong64-gnu": "4.64.5",
+        "@rollup/rollup-linux-loong64-musl": "4.64.5",
+        "@rollup/rollup-linux-ppc64-gnu": "4.64.5",
+        "@rollup/rollup-linux-ppc64-musl": "4.64.5",
+        "@rollup/rollup-linux-riscv64-gnu": "4.64.5",
+        "@rollup/rollup-linux-riscv64-musl": "4.64.5",
+        "@rollup/rollup-linux-s390x-gnu": "4.64.5",
+        "@rollup/rollup-linux-x64-gnu": "4.64.5",
+        "@rollup/rollup-linux-x64-musl": "4.64.5",
+        "@rollup/rollup-openbsd-x64": "4.64.5",
+        "@rollup/rollup-openharmony-arm64": "4.64.5",
+        "@rollup/rollup-win32-arm64-msvc": "4.64.5",
+        "@rollup/rollup-win32-ia32-msvc": "4.64.5",
+        "@rollup/rollup-win32-x64-gnu": "4.64.5",
+        "@rollup/rollup-win32-x64-msvc": "4.64.5",
+        "fsevents": "~2.3.2"
+      }
+    },
+    "node_modules/semver": {
+      "version": "7.8.5",
+      "resolved": "https://registry.npmjs.org/semver/-/semver-7.8.5.tgz",
+      "integrity": "sha512-Y7/KDsb8LjooZpwaqGyulO6DQlksgCncchHGk+sZIY4SBvUocMBEFH5Ur1fI4dV+Jvl0w6cjvucaIi40puRioA==",
+      "dev": true,
+      "license": "ISC",
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "engines": {
+        "node": ">=10"
+      }
+    },
+    "node_modules/sharp": {
+      "version": "0.34.5",
+      "resolved": "https://registry.npmjs.org/sharp/-/sharp-0.34.5.tgz",
+      "integrity": "sha512-Ou9I5Ft9WNcCbXrU9cMgPBcCK8LiwLqcbywW3t4oDV37n1pzpuNLsYiAV8eODnjbtQlSDwZ2cUEeQz4E54Hltg==",
+      "dev": true,
+      "hasInstallScript": true,
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@img/colour": "^1.0.0",
+        "detect-libc": "^2.1.2",
+        "semver": "^7.7.3"
+      },
+      "engines": {
+        "node": "^18.17.0 || ^20.3.0 || >=21.0.0"
+      },
+      "funding": {
+        "url": "https://opencollective.com/libvips"
+      },
+      "optionalDependencies": {
+        "@img/sharp-darwin-arm64": "0.34.5",
+        "@img/sharp-darwin-x64": "0.34.5",
+        "@img/sharp-libvips-darwin-arm64": "1.2.4",
+        "@img/sharp-libvips-darwin-x64": "1.2.4",
+        "@img/sharp-libvips-linux-arm": "1.2.4",
+        "@img/sharp-libvips-linux-arm64": "1.2.4",
+        "@img/sharp-libvips-linux-ppc64": "1.2.4",
+        "@img/sharp-libvips-linux-riscv64": "1.2.4",
+        "@img/sharp-libvips-linux-s390x": "1.2.4",
+        "@img/sharp-libvips-linux-x64": "1.2.4",
+        "@img/sharp-libvips-linuxmusl-arm64": "1.2.4",
+        "@img/sharp-libvips-linuxmusl-x64": "1.2.4",
+        "@img/sharp-linux-arm": "0.34.5",
+        "@img/sharp-linux-arm64": "0.34.5",
+        "@img/sharp-linux-ppc64": "0.34.5",
+        "@img/sharp-linux-riscv64": "0.34.5",
+        "@img/sharp-linux-s390x": "0.34.5",
+        "@img/sharp-linux-x64": "0.34.5",
+        "@img/sharp-linuxmusl-arm64": "0.34.5",
+        "@img/sharp-linuxmusl-x64": "0.34.5",
+        "@img/sharp-wasm32": "0.34.5",
+        "@img/sharp-win32-arm64": "0.34.5",
+        "@img/sharp-win32-ia32": "0.34.5",
+        "@img/sharp-win32-x64": "0.34.5"
+      }
+    },
+    "node_modules/source-map-js": {
+      "version": "1.2.2",
+      "resolved": "https://registry.npmjs.org/source-map-js/-/source-map-js-1.2.2.tgz",
+      "integrity": "sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==",
+      "dev": true,
+      "license": "BSD-3-Clause",
+      "engines": {
+        "node": ">=0.10.0"
+      }
+    },
+    "node_modules/three": {
+      "version": "0.180.0",
+      "resolved": "https://registry.npmjs.org/three/-/three-0.180.0.tgz",
+      "integrity": "sha512-o+qycAMZrh+TsE01GqWUxUIKR1AL0S8pq7zDkYOQw8GqfX8b8VoCKYUoHbhiX5j+7hr8XsuHDVU6+gkQJQKg9w==",
+      "license": "MIT"
+    },
+    "node_modules/tinyglobby": {
+      "version": "0.2.17",
+      "resolved": "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.17.tgz",
+      "integrity": "sha512-wXR/dYpcqKmfWpEdZjiKJOwCNFndD0DMnrW/cYjVGttEkBfVgcLFHoNrlj47mjOVic9yyNu65alsgF4NQyTa2g==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "fdir": "^6.5.0",
+        "picomatch": "^4.0.4"
+      },
+      "engines": {
+        "node": ">=12.0.0"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/SuperchupuDev"
+      }
+    },
+    "node_modules/tslib": {
+      "version": "2.8.1",
+      "resolved": "https://registry.npmjs.org/tslib/-/tslib-2.8.1.tgz",
+      "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==",
+      "dev": true,
+      "license": "0BSD",
+      "optional": true
+    },
+    "node_modules/vite": {
+      "version": "6.4.2",
+      "resolved": "https://registry.npmjs.org/vite/-/vite-6.4.2.tgz",
+      "integrity": "sha512-2N/55r4JDJ4gdrCvGgINMy+HH3iRpNIz8K6SFwVsA+JbQScLiC+clmAxBgwiSPgcG9U15QmvqCGWzMbqda5zGQ==",
+      "dev": true,
+      "license": "MIT",
+      "dependencies": {
+        "esbuild": "^0.25.0",
+        "fdir": "^6.4.4",
+        "picomatch": "^4.0.2",
+        "postcss": "^8.5.3",
+        "rollup": "^4.34.9",
+        "tinyglobby": "^0.2.13"
+      },
+      "bin": {
+        "vite": "bin/vite.js"
+      },
+      "engines": {
+        "node": "^18.0.0 || ^20.0.0 || >=22.0.0"
+      },
+      "funding": {
+        "url": "https://github.com/vitejs/vite?sponsor=1"
+      },
+      "optionalDependencies": {
+        "fsevents": "~2.3.3"
+      },
+      "peerDependencies": {
+        "@types/node": "^18.0.0 || ^20.0.0 || >=22.0.0",
+        "jiti": ">=1.21.0",
+        "less": "*",
+        "lightningcss": "^1.21.0",
+        "sass": "*",
+        "sass-embedded": "*",
+        "stylus": "*",
+        "sugarss": "*",
+        "terser": "^5.16.0",
+        "tsx": "^4.8.1",
+        "yaml": "^2.4.2"
+      },
+      "peerDependenciesMeta": {
+        "@types/node": {
+          "optional": true
+        },
+        "jiti": {
+          "optional": true
+        },
+        "less": {
+          "optional": true
+        },
+        "lightningcss": {
+          "optional": true
+        },
+        "sass": {
+          "optional": true
+        },
+        "sass-embedded": {
+          "optional": true
+        },
+        "stylus": {
+          "optional": true
+        },
+        "sugarss": {
+          "optional": true
+        },
+        "terser": {
+          "optional": true
+        },
+        "tsx": {
+          "optional": true
+        },
+        "yaml": {
+          "optional": true
+        }
+      }
+    }
+  }
+}
+```
+
+### src/hero.js
+
+```js
+import {lightingIntro} from './lighting-intro.js';
+import {installParallax} from './parallax.js';
+import {installOrbit,INITIAL_ORBIT,orbitPose} from './orbit.js';
+import {mountSpotlight} from './spotlight.js';
+const frame=document.querySelector('#ferrari-viewer');
+const stage=document.querySelector('.car-stage');
+const input=document.querySelector('.camera-input');
+const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)');
+installParallax(stage,document.querySelector('.camera-track'),reducedMotion);
+const introAbort=new AbortController();
+mountSpotlight(document.querySelector('.sl'));
+document.querySelector('.story-arrow').addEventListener('click',event=>{
+  event.preventDefault();
+  const story=document.querySelector('#the-story');
+  story.scrollIntoView({behavior:reducedMotion.matches?'instant':'smooth'});
+  story.focus({preventScroll:true});
+});
+function fail(){stage.classList.add('load-failed');document.querySelector('.fallback').hidden=false;}
+const loadingTimeout=setTimeout(fail,45000);
+reducedMotion.addEventListener('change',()=>{if(reducedMotion.matches)introAbort.abort();});
+window.addEventListener('pagehide',()=>{introAbort.abort();clearTimeout(loadingTimeout);},{once:true});
+const script=document.createElement('script');
+script.src='https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js';
+script.onerror=fail;
+script.onload=()=>new window.Sketchfab('1.12.1',frame).init('011cad3526e945799d6e98dde6390182',{
+  autostart:1,camera:0,dnt:1,preload:innerWidth>760?1:0,scrollwheel:0,dof_circle:0,animation_autoplay:0,transparent:1,
+  success(api){
+    api.addEventListener('viewerready',async()=>{
+      api.setUserInteraction(false);api.setBackground({transparent:true});api.setFov(27);
+      clearTimeout(loadingTimeout);stage.classList.remove('load-failed');document.querySelector('.fallback').hidden=true;
+      const pose=orbitPose(INITIAL_ORBIT,frame.clientWidth/frame.clientHeight);
+      api.setCameraLookAt(pose.position,pose.target,0);
+      installOrbit(input,frame,api,reducedMotion);
+      await lightingIntro(api,stage,{reduced:reducedMotion.matches,signal:introAbort.signal});
+    });
+    api.start();
+  },error:fail,
+});
+document.head.append(script);
+```
+
+### src/hero.css
+
+```css
+@font-face{font-family:League;src:url('/fonts/league-gothic.woff') format('woff');font-display:swap}
+:root{color:#222;background:#131226;font-family:Arial,sans-serif}*{box-sizing:border-box}body{margin:0;min-width:320px}.camera-track{height:400svh}.car-stage{--day:0;position:sticky;top:0;height:100svh;overflow:hidden;background:#efefef;isolation:isolate}.night-set,.day-set{position:absolute;inset:0;pointer-events:none}.night-set{background:radial-gradient(ellipse at 6% 53%,#ffce92 0%,#f85737 18%,transparent 53%),radial-gradient(ellipse at 94% 48%,#81c5f2 0%,#225b95 27%,transparent 59%),linear-gradient(180deg,#2a183d,#6c234d 47%,#121322 73%);opacity:calc(1 - var(--day))}.night-set:after{content:'';position:absolute;inset:61% 0 0;background:linear-gradient(180deg,transparent,#080d1dde)}.day-set{background:#efefef;opacity:var(--day)}.wave-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.54;filter:grayscale(.8);mask-image:linear-gradient(#000 0%,#000 35%,transparent 76%)}.sakura-art{position:absolute;left:0;top:-3%;width:100%;height:78%;object-fit:cover;object-position:center top;opacity:.92}.ghost-type{position:absolute;left:38%;top:9%;font-family:League,Impact,sans-serif;font-size:clamp(130px,31vw,530px);line-height:1;letter-spacing:-.02em;color:#857d7113}.japanese-type{position:absolute;top:17%;left:15%;writing-mode:vertical-rl;font-family:'Yu Mincho','MS Mincho',serif;font-size:clamp(28px,4.1vw,70px);font-weight:700;letter-spacing:.16em;color:#3e3834}.art-caption{position:absolute;bottom:5%;left:7%;display:flex;align-items:center;gap:15px;font-size:10px;letter-spacing:.16em;line-height:1.8;color:#61544d}.red-seal{display:grid;place-content:center;width:44px;height:44px;border:1px solid #b2362d;border-radius:50%;font-family:League,Impact,sans-serif;font-size:24px;letter-spacing:0;color:#b2362d}
+iframe{position:absolute;z-index:1;inset:0;width:100%;height:100%;border:0;background:transparent;opacity:0;transition:opacity 1s}.is-ready iframe{opacity:1}.camera-input{position:absolute;z-index:2;inset:70px 0 52px;touch-action:pan-y;outline-offset:-5px}.camera-input:focus-visible{outline:1px solid #777}.loading-status{position:absolute;z-index:3;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;color:#fff;pointer-events:none;transition:opacity .7s,visibility .7s}.loading-title{font-family:League,Impact,sans-serif;font-size:clamp(80px,13vw,190px);line-height:1;letter-spacing:.015em}.loading-label{font-size:10px;letter-spacing:.3em}.loader{width:90px;height:1px;background:linear-gradient(90deg,transparent,#fff,transparent);background-size:200% 100%;animation:loading 1.7s ease-in-out infinite}.is-ready .loading-status{opacity:0;visibility:hidden}.load-failed .loading-status{display:none}.fallback{position:absolute;z-index:4;bottom:70px;left:50%;transform:translateX(-50%);padding:15px;background:#efefef;color:#333;font-size:14px;white-space:nowrap}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}@keyframes loading{to{background-position:-200% 0}}
+@media(max-width:760px){.sakura-art{width:160%;height:66%;left:-20%;object-fit:contain;top:0}.wave-art{object-position:center;opacity:.42}.japanese-type{top:19%;left:45%;font-size:35px}.ghost-type{top:24%;left:15%;font-size:65vw}.art-caption{bottom:8%;left:8%;font-size:8px}.red-seal{height:34px;width:34px;font-size:20px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* Depth planes: distant relief, poster type, brush lettering, blossoms, foreground. */
+@font-face{font-family:YujiBoku;src:url('/fonts/YujiBoku-Ferrari.ttf') format('truetype');font-weight:400;font-display:swap}
+.car-stage{--parallax-x:0;--parallax-y:0}
+.wave-art{inset:-3%;width:106%;height:106%;transform:translate3d(calc(var(--parallax-x)*-12px),calc(var(--parallax-y)*-10px),0)}
+.ghost-type{transform:translate3d(calc(var(--parallax-x)*-25px),calc(var(--parallax-y)*-24px),0)}
+.japanese-type{top:14%;left:14%;font-family:YujiBoku,serif;font-size:clamp(48px,6.4vw,94px);font-weight:400;letter-spacing:-.11em;line-height:1.08;color:#26231f;-webkit-text-stroke:.65px currentColor;transform:translate3d(calc(var(--parallax-x)*-39px),calc(var(--parallax-y)*-35px),0) rotate(-5deg)}
+.japanese-type span{display:inline-block;transform:rotate(2deg)}
+.japanese-type span:nth-child(2){transform:translateX(-5px) rotate(-7deg)}
+.japanese-type span:nth-child(3){transform:translateX(3px) rotate(4deg)}
+.japanese-type span:last-child{transform:rotate(-5deg)}
+.sakura-art{left:-5%;top:-6%;width:110%;height:83%;transform:translate3d(calc(var(--parallax-x)*38px),calc(var(--parallax-y)*32px),0) rotate(calc(var(--parallax-x)*.6deg));transform-origin:80% 0}
+.foreground-art{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:var(--day);transform:translate3d(calc(var(--parallax-x)*78px),calc(var(--parallax-y)*64px),0)}
+.petal{position:absolute;display:block;border-radius:85% 15% 75% 25%;background:radial-gradient(ellipse at 35% 28%,#fff0ef,#e9b7bb 65%,#c78391);box-shadow:inset 1px 1px 4px #fff9}
+.petal-one{width:42px;height:62px;left:5%;top:72%;transform:rotate(-28deg);filter:blur(2px);opacity:.7}
+.petal-two{width:22px;height:36px;right:7%;top:36%;transform:rotate(48deg);opacity:.65}
+.petal-three{width:16px;height:25px;right:16%;top:84%;transform:rotate(-68deg);filter:blur(1px);opacity:.45}
+.camera-input{z-index:3}.loading-status{z-index:4}.fallback{z-index:5}
+@media(max-width:760px){.japanese-type{top:19%;left:44%;font-size:48px;-webkit-text-stroke:.45px}.sakura-art{width:170%;height:69%;left:-25%;top:-2%}.petal-one{width:26px;height:40px;left:5%;top:72%}.petal-two{right:9%;top:40%;width:15px;height:23px}.petal-three{display:none}}
+@media(prefers-reduced-motion:reduce){.wave-art,.ghost-type,.sakura-art,.foreground-art{transform:none}.japanese-type{transform:rotate(-5deg)}}
+@media(min-width:761px){.japanese-type{left:21%;top:17%}}
+@font-face{font-family:YujiHayate;src:url('/fonts/YujiBoku-Hayate.ttf') format('truetype');font-display:swap}
+.camera-track{height:100svh}.camera-input{touch-action:none;cursor:grab}.camera-input.is-dragging{cursor:grabbing}
+.japanese-type{font-family:YujiHayate,serif;writing-mode:horizontal-tb;display:flex;flex-direction:column;align-items:center;gap:0;left:20%;top:18%;font-size:clamp(110px,11vw,172px);line-height:.98;letter-spacing:0;-webkit-text-stroke:1.4px currentColor}
+.japanese-type span:nth-child(2){transform:translateX(7px) rotate(-7deg)}
+.japanese-type:after{content:'F40';align-self:flex-end;margin:14px -8px 0 0;padding:4px 5px 2px 5px;background:#a93228;color:#f5e9dc;font:24px/.9 League,sans-serif;letter-spacing:0;-webkit-text-stroke:0;transform:rotate(4deg);border-radius:2px}
+@media(max-width:760px){.japanese-type{left:44%;top:19%;font-size:82px;-webkit-text-stroke:1px}.japanese-type:after{font-size:17px;margin-top:8px}}
+/* Ink is revealed by an uneven moving brush edge, then the red seal lands. */
+.japanese-type span{clip-path:polygon(0 0,100% 0,100% 0,0 0);will-change:clip-path}
+.intro-complete .japanese-type span{animation:write-ink 1.3s cubic-bezier(.35,.05,.22,1) both}
+.intro-complete .japanese-type span:nth-child(2){animation-delay:1.05s}
+.japanese-type:after{opacity:0}
+.intro-complete .japanese-type:after{animation:seal-ink .45s ease-out 2.2s both}
+@keyframes write-ink{
+  0%{clip-path:polygon(0 0,100% 0,100% 0,80% 0,60% 0,40% 0,20% 0,0 0)}
+  24%{clip-path:polygon(0 0,100% 0,100% 20%,80% 26%,60% 22%,40% 30%,20% 24%,0 28%)}
+  48%{clip-path:polygon(0 0,100% 0,100% 51%,80% 46%,60% 55%,40% 49%,20% 57%,0 50%)}
+  76%{clip-path:polygon(0 0,100% 0,100% 72%,80% 82%,60% 75%,40% 84%,20% 77%,0 86%)}
+  100%{clip-path:polygon(0 0,100% 0,100% 100%,80% 100%,60% 100%,40% 100%,20% 100%,0 100%)}
+}
+@keyframes seal-ink{from{opacity:0;transform:rotate(4deg) scale(1.16)}to{opacity:1;transform:rotate(4deg) scale(1)}}
+@media(prefers-reduced-motion:reduce){.japanese-type span{clip-path:none!important;will-change:auto}.japanese-type:after{opacity:1}}
+.fuji-art{position:absolute;left:29%;top:6%;width:74%;height:62%;object-fit:contain;opacity:.64;filter:saturate(.48);transform:translate3d(calc(var(--parallax-x)*-7px),calc(var(--parallax-y)*-6px),0);mask-image:linear-gradient(#000 0%,#000 65%,transparent 98%)}
+.ghost-type{opacity:.42}.wave-art{opacity:.27}
+@media(max-width:760px){.fuji-art{left:-12%;top:12%;width:124%;height:52%;opacity:.6}.japanese-type{left:15%;top:18%}}
+@media(prefers-reduced-motion:reduce){.fuji-art{transform:none}}
+.fuji-art{mask-image:linear-gradient(#000 0%,#000 65%,transparent 98%),linear-gradient(90deg,transparent,#000 12%,#000 92%,transparent);mask-composite:intersect}
+/* Hero identity and a clear route to the story below the interactive model. */
+.car-stage{position:relative}.ghost-type{opacity:1;color:#514c453d;text-shadow:0 1px 0 #ffffff35}
+.hero-signature,.story-arrow,.model-credit{position:absolute;z-index:6;color:#24221f;opacity:var(--day);font-family:DMSans,Arial,sans-serif}
+.hero-signature{left:6%;bottom:5.5%}.hero-kicker{font-size:11px;letter-spacing:.14em}.hero-signature h1{font:clamp(26px,3vw,48px)/1.08 League,Impact,sans-serif;letter-spacing:.035em;margin:6px 0 9px}.hero-signature>a{font-size:12px;display:inline-flex;align-items:center;gap:24px;padding:9px 14px;border:1px solid #aaa59d;border-radius:99px;text-decoration:none;color:inherit;background:#f4f2edab;transition:background .2s}.hero-signature>a:hover{background:#fff}
+.story-arrow{bottom:5.5%;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:10px;flex-direction:column;text-decoration:none}.story-arrow svg{width:48px;height:48px;padding:12px;border:1px solid #aaa59d;border-radius:50%;transition:transform .25s,background .25s}.story-arrow:hover svg{transform:translateY(5px);background:#fff}.story-arrow span{font-size:9px;letter-spacing:.2em}
+.model-credit{right:5%;bottom:5.5%;text-decoration:none;display:flex;flex-direction:column;gap:5px}.model-credit span{font-size:8px;letter-spacing:.14em;opacity:.65}.model-credit strong{font-size:14px;font-weight:500}.model-credit:hover strong{text-decoration:underline}
+@media(max-width:760px){.hero-signature{left:24px;bottom:64px}.hero-signature h1{font-size:30px}.hero-kicker{font-size:8px}.hero-signature>a{font-size:10px;padding:7px 12px}.story-arrow{left:auto;right:24px;bottom:80px;transform:none}.model-credit{right:24px;bottom:22px;flex-direction:row;gap:8px;align-items:center}.model-credit strong{font-size:11px}.story-arrow span{font-size:8px}}
+```
+
+### src/lighting-intro.js
+
+```js
+const lerp=(a,b,t)=>a+(b-a)*t;
+const ease=t=>t*t*(3-2*t);
+const vector=(value,n)=>Array.from({length:n},(_,i)=>value[i]);
+const normalize=a=>{const l=Math.hypot(...a)||1;return a.map(x=>x/l);};
+const cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
+function lightMatrix(direction,original){
+  const z=normalize(direction),x=normalize(cross([0,0,1],z)),y=cross(z,x);
+  return [...x,0,...y,0,...z,0,original[12],original[13],original[14],1];
+}
+function read(api,name,...args){
+  return new Promise((resolve,reject)=>{
+    const timeout=setTimeout(()=>reject(new Error('Lighting read timed out')),2500);
+    api[name](...args,(error,data)=>{clearTimeout(timeout);error?reject(error):resolve(data);});
+  });
+}
+
+export async function lightingIntro(api,stage,{reduced=false,signal}={}){
+  const finishVisual=()=>{
+    stage.style.setProperty('--day','1');
+    stage.classList.add('is-ready','intro-complete');
+    stage.dataset.phase='day';
+  };
+  if(reduced||signal?.aborted){finishVisual();return;}
+  let environment,lights,enabled;
+  try{
+    [environment,enabled,...lights]=await Promise.all([
+      read(api,'getEnvironment'),read(api,'isLightFeatureEnabled'),
+      ...[0,1,2].map(i=>read(api,'getLight',i)),
+    ]);
+  }catch{finishVisual();return;}
+  const originals=lights.map(light=>({...light,color:vector(light.color,3),matrix:vector(light.matrix,16)}));
+  const colors=[[.015,.24,1],[1,.035,.006],[.22,.015,.12]];
+  const directions=[[-.6,.9,.45],[-.3,-.9,.38],[.15,.1,1]];
+  const intensities=[.66,.8,.06];
+  function apply(t){
+    api.setEnvironment({exposure:environment.exposure*lerp(.035,1,t),lightIntensity:environment.lightIntensity*lerp(.08,1,t)});
+    originals.forEach((original,i)=>{
+      const direction=directions[i].map((v,k)=>lerp(v,original.matrix[8+k],t));
+      api.setLight(i,{
+        enabled:true,shadowEnabled:original.shadowEnabled,
+        color:colors[i].map((v,k)=>lerp(v,original.color[k],t)),
+        intensity:lerp(intensities[i],original.enabled?original.intensity:0,t),
+        matrix:lightMatrix(direction,original.matrix),
+      });
+    });
+  }
+  const restore=()=>{
+    api.setEnvironment({exposure:environment.exposure,lightIntensity:environment.lightIntensity});
+    originals.forEach((original,i)=>api.setLight(i,{enabled:original.enabled,shadowEnabled:original.shadowEnabled,color:original.color,intensity:original.intensity,matrix:original.matrix}));
+    api.setLightFeatureEnabled(enabled);
+  };
+  if(signal?.aborted){finishVisual();return;}
+  api.setLightFeatureEnabled(true);
+  apply(0);
+  // Give the viewer a paint to apply the dark lights before exposing the model.
+  await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+  stage.classList.add('is-ready');
+  stage.dataset.phase='night';
+  await new Promise(resolve=>{
+    let raf=0,done=false;
+    const started=performance.now();
+    const finish=()=>{
+      if(done)return;
+      done=true;cancelAnimationFrame(raf);restore();finishVisual();
+      signal?.removeEventListener('abort',finish);resolve();
+    };
+    signal?.addEventListener('abort',finish,{once:true});
+    if(signal?.aborted){finish();return;}
+    const tick=now=>{
+      const raw=Math.max(0,Math.min(1,(now-started-2200)/5200));
+      const t=ease(raw);
+      stage.style.setProperty('--day',String(t));
+      if(raw>0)stage.dataset.phase='dawn';
+      apply(t);
+      if(raw===1)finish();else raf=requestAnimationFrame(tick);
+    };
+    raf=requestAnimationFrame(tick);
+  });
+}
+```
+
+### src/orbit.js
+
+```js
+export const ORBIT_LIMITS={minElevation:.06,maxElevation:.72,minDistance:3.5,maxDistance:12};
+export const INITIAL_ORBIT={azimuth:Math.atan2(-4.9,6.6),elevation:.14,distance:8.3};
+const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
+export function clampOrbit(state){return {...state,elevation:clamp(state.elevation,ORBIT_LIMITS.minElevation,ORBIT_LIMITS.maxElevation),distance:clamp(state.distance,ORBIT_LIMITS.minDistance,ORBIT_LIMITS.maxDistance)};}
+export function orbitPose(state,aspect){
+  const safe=clampOrbit(state),r=safe.distance*Math.max(1,1.55/Math.max(.25,aspect));
+  return {position:[Math.cos(safe.azimuth)*r*Math.cos(safe.elevation),Math.sin(safe.azimuth)*r*Math.cos(safe.elevation),.6+r*Math.sin(safe.elevation)],target:[0,0,.6]};
+}
+export function installOrbit(input,frame,api,reducedMotion){
+  let desired={...INITIAL_ORBIT},current={...desired},raf=0,previous=0,pinch=0;
+  const pointers=new Map();
+  const paint=()=>{const pose=orbitPose(current,frame.clientWidth/frame.clientHeight);api.setCameraLookAt(pose.position,pose.target,0);};
+  function tick(now){
+    raf=0;const blend=reducedMotion.matches?1:1-Math.exp(-Math.min(64,now-previous||16)/75);previous=now;
+    for(const key of Object.keys(current))current[key]+=(desired[key]-current[key])*blend;
+    paint();if(Object.keys(current).some(key=>Math.abs(current[key]-desired[key])>.0001))raf=requestAnimationFrame(tick);
+  }
+  function update(){desired=clampOrbit(desired);if(!raf){previous=performance.now();raf=requestAnimationFrame(tick);}}
+  const distance=()=>{const [a,b]=[...pointers.values()];return a&&b?Math.hypot(a.x-b.x,a.y-b.y):0;};
+  input.addEventListener('pointerdown',event=>{
+    if(event.button!==0)return;
+    input.setPointerCapture(event.pointerId);pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});pinch=distance();input.classList.add('is-dragging');
+  });
+  input.addEventListener('pointermove',event=>{
+    const old=pointers.get(event.pointerId);if(!old)return;
+    pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});
+    if(pointers.size===1){desired.azimuth-=(event.clientX-old.x)*.006;desired.elevation+=(event.clientY-old.y)*.003;}
+    else{const next=distance();if(pinch>0&&next>0)desired.distance*=pinch/next;pinch=next;}
+    update();
+  });
+  function release(event){pointers.delete(event.pointerId);pinch=distance();if(!pointers.size)input.classList.remove('is-dragging');}
+  for(const name of ['pointerup','pointercancel','lostpointercapture'])input.addEventListener(name,release);
+  input.addEventListener('wheel',event=>{
+    const delta=event.deltaY*(event.deltaMode===1?16:event.deltaMode===2?innerHeight:1);
+    const next=clamp(desired.distance*Math.exp(clamp(delta,-300,300)*.0015),ORBIT_LIMITS.minDistance,ORBIT_LIMITS.maxDistance);
+    if(next===desired.distance)return;
+    event.preventDefault();desired.distance=next;update();
+  },{passive:false});
+  input.addEventListener('keydown',event=>{
+    if(event.key==='ArrowLeft')desired.azimuth+=.15;
+    else if(event.key==='ArrowRight')desired.azimuth-=.15;
+    else if(event.key==='ArrowUp')desired.elevation+=.06;
+    else if(event.key==='ArrowDown')desired.elevation-=.06;
+    else if(['+','='].includes(event.key))desired.distance*=.88;
+    else if(event.key==='-')desired.distance/=.88;
+    else if(event.key==='Home')desired={...INITIAL_ORBIT};
+    else return;
+    event.preventDefault();update();
+  });
+  window.addEventListener('resize',paint);
+  window.addEventListener('pagehide',()=>{cancelAnimationFrame(raf);window.removeEventListener('resize',paint);},{once:true});
+  paint();
+}
+```
+
+### src/parallax.js
+
+```js
+// Artwork moves independently of the grounded model and its directed camera.
+export function installParallax(stage,track,reducedMotion){
+  let pointerX=0,pointerY=0,scroll=0,shot=0,x=0,y=0,raf=0,previous=0;
+  const fine=matchMedia('(pointer:fine)');
+  function target(){
+    return reducedMotion.matches?[0,0]:[pointerX*.68+shot*.32,pointerY*.5-scroll*.5];
+  }
+  function tick(now){
+    raf=0;
+    const [tx,ty]=target();
+    const blend=1-Math.exp(-Math.min(64,now-previous||16)/130);previous=now;
+    x+=(tx-x)*blend;y+=(ty-y)*blend;
+    stage.style.setProperty('--parallax-x',x.toFixed(4));
+    stage.style.setProperty('--parallax-y',y.toFixed(4));
+    if(Math.abs(tx-x)+Math.abs(ty-y)>.001)raf=requestAnimationFrame(tick);
+  }
+  function update(){if(!raf&&!document.hidden){previous=performance.now();raf=requestAnimationFrame(tick);}}
+  function onPointer(event){
+    if(!fine.matches||event.pointerType==='touch')return;
+    pointerX=(event.clientX/innerWidth-.5)*2;pointerY=(event.clientY/innerHeight-.5)*2;update();
+  }
+  function leave(){pointerX=0;pointerY=0;update();}
+  function onScroll(){scroll=Math.max(0,Math.min(1,window.scrollY/Math.max(1,track.offsetHeight-stage.offsetHeight)));update();}
+  function onVisibility(){if(document.hidden){cancelAnimationFrame(raf);raf=0;}else update();}
+  window.addEventListener('pointermove',onPointer,{passive:true});
+  document.documentElement.addEventListener('pointerleave',leave);
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.addEventListener('visibilitychange',onVisibility);
+  reducedMotion.addEventListener('change',update);
+  window.addEventListener('pagehide',()=>{
+    cancelAnimationFrame(raf);
+    window.removeEventListener('pointermove',onPointer);
+    document.documentElement.removeEventListener('pointerleave',leave);
+    window.removeEventListener('scroll',onScroll);
+    document.removeEventListener('visibilitychange',onVisibility);
+    reducedMotion.removeEventListener('change',update);
+  },{once:true});
+  onScroll();
+  return {setShot(index){shot=[-.45,.7,.25,-.65][index]??0;update();}};
+}
+```
+
+### src/spotlight.js
+
+```js
+import {gsap} from 'gsap';
+import {CustomEase} from 'gsap/CustomEase';
+import './spotlight.css';
+gsap.registerPlugin(CustomEase);
+CustomEase.create('sl-hop','0.35, 0.75, 0, 1');
+const DEFAULTS={hoverGrowth:50,cardXRange:100,cardYJitter:50,cardRotationJitter:20,cardFollow:.75,cardsDuration:1,labelDuration:.25,entryBlur:6};
+const SETS=[[1,2,6,8],[2,5,1,4],[3,6,8,2],[7,8,5,3],[4,7,3,2],[8,6,1,7]];
+const photo=n=>`./photos/f40-${String(n).padStart(2,'0')}.webp`;
+export function rowHeights(count,index,base,growth){
+  const weights=Array.from({length:count},(_,i)=>i===index?0:1/Math.abs(i-index));
+  const total=weights.reduce((a,b)=>a+b,0);
+  return weights.map((weight,i)=>i===index?base+growth:base-growth*weight/total);
+}
+export function mountSpotlight(root,config={}){
+  if(!root)return()=>{};
+  const cfg={...DEFAULTS,...config},panel=root.querySelector('.sl-panel'),list=root.querySelector('.sl-list');
+  const items=[...root.querySelectorAll('.sl-item')],cards=[...root.querySelectorAll('.sl-card')],labels=[...root.querySelectorAll('.sl-label span')];
+  const motion=matchMedia('(prefers-reduced-motion: reduce)'),hover=matchMedia('(hover:hover) and (pointer:fine)');
+  let baseHeight=0,active=-1,destroyed=false;
+  const listeners=[];
+  const on=(el,name,fn)=>{el.addEventListener(name,fn);listeners.push(()=>el.removeEventListener(name,fn));};
+  const duration=value=>motion.matches?0:value;
+  function measure(){
+    gsap.killTweensOf(items);gsap.set(items,{clearProps:'height'});
+    baseHeight=Math.round(Math.max(...items.map(el=>el.offsetHeight))+10);
+    gsap.set(items,{height:baseHeight});
+  }
+  cards.forEach((card,i)=>{card.src=photo(SETS[0][i]);gsap.set(card,{rotation:Number(card.dataset.rotation),scale:0,filter:`blur(${cfg.entryBlur}px)`});});
+  gsap.set(root.querySelectorAll('.sl-label__alt'),{scaleX:.75,scaleY:1.25,opacity:0,filter:'blur(1px)'});
+  function animateLabel(el,{opacity,scaleX,scaleY,blur}){
+    gsap.to(el,{opacity,duration:duration(cfg.labelDuration*.4),delay:motion.matches?0:.025,ease:'sl-hop',overwrite:'auto'});
+    gsap.to(el,{scaleX,scaleY,duration:duration(cfg.labelDuration),ease:'back.out(1.75)',overwrite:'auto'});
+    gsap.to(el,{filter:`blur(${blur}px)`,duration:duration(cfg.labelDuration),ease:'sl-hop',overwrite:'auto'});
+  }
+  function swap(item,enter){
+    animateLabel(item.querySelector('.sl-label__default'),enter?{opacity:0,scaleX:.75,scaleY:1.25,blur:1}:{opacity:1,scaleX:1,scaleY:1,blur:0});
+    animateLabel(item.querySelector('.sl-label__alt'),enter?{opacity:1,scaleX:1,scaleY:1,blur:0}:{opacity:0,scaleX:.75,scaleY:1.25,blur:1});
+  }
+  function placeCards(item,index){
+    const rect=item.getBoundingClientRect(),listRect=list.getBoundingClientRect();
+    const followY=(rect.top+rect.height/2-listRect.top-listRect.height/2)*cfg.cardFollow;
+    cards.forEach((card,i)=>{
+      card.src=photo(SETS[index][i]);
+      gsap.to(card,{x:gsap.utils.random(-cfg.cardXRange,cfg.cardXRange),y:followY+gsap.utils.random(-cfg.cardYJitter,cfg.cardYJitter),rotation:Number(card.dataset.rotation)+gsap.utils.random(-cfg.cardRotationJitter,cfg.cardRotationJitter),duration:duration(cfg.cardsDuration),ease:'elastic.out(1, 0.5)',overwrite:'auto'});
+    });
+  }
+  function show(){if(!hover.matches)return;gsap.to(cards,{scale:1,filter:'blur(0px)',duration:duration(.75),ease:'elastic.out(1, 0.6)',overwrite:'auto'});}
+  function hide(){
+    if(active>=0)swap(items[active],false);active=-1;
+    gsap.to(cards,{scale:0,filter:`blur(${cfg.entryBlur}px)`,duration:duration(.5),ease:'power3.out',overwrite:'auto'});
+    gsap.to(items,{height:baseHeight,duration:duration(.35),ease:'power3.out',overwrite:'auto'});
+  }
+  function enter(item,index){
+    if(!hover.matches)return;
+    if(active>=0&&active!==index)swap(items[active],false);
+    active=index;swap(item,true);placeCards(item,index);
+    const heights=rowHeights(items.length,index,baseHeight,cfg.hoverGrowth);
+    items.forEach((row,i)=>gsap.to(row,{height:heights[i],duration:duration(.5),ease:'power2.out',overwrite:'auto'}));
+  }
+  on(list,'mouseenter',show);on(list,'mouseleave',hide);
+  items.forEach((item,index)=>{
+    on(item,'mouseenter',()=>enter(item,index));on(item,'mouseleave',()=>swap(item,false));
+    on(item,'focus',()=>{show();enter(item,index);});
+  });
+  on(list,'focusout',event=>{if(!list.contains(event.relatedTarget))hide();});
+  on(panel,'pointermove',event=>{if(!hover.matches)return;const r=panel.getBoundingClientRect();panel.style.setProperty('--sl-mx',`${(event.clientX-r.left)/r.width*100}%`);panel.style.setProperty('--sl-my',`${(event.clientY-r.top)/r.height*100}%`);});
+  on(panel,'pointerenter',()=>{if(hover.matches)panel.classList.add('is-lit');});
+  on(panel,'pointerleave',()=>panel.classList.remove('is-lit'));
+  on(window,'resize',()=>{hide();measure();});
+  on(hover,'change',hide);on(motion,'change',hide);
+  measure();document.fonts.ready.then(()=>{if(!destroyed)measure();});
+  // Warm the eight supplied photos, reused in six curated four-image sets.
+  for(let i=1;i<=8;i++){const image=new Image();image.src=photo(i);}
+  function destroy(){destroyed=true;listeners.forEach(remove=>remove());gsap.killTweensOf([...cards,...items,...labels]);gsap.set([...cards,...items,...labels],{clearProps:'all'});panel.classList.remove('is-lit');panel.style.removeProperty('--sl-mx');panel.style.removeProperty('--sl-my');}
+  on(window,'pagehide',destroy);
+  return destroy;
+}
+```
+
+### src/spotlight.css
+
+```css
+@font-face{font-family:Anton;src:url('/fonts/Anton-Regular.ttf')}@font-face{font-family:Caveat;src:url('/fonts/Caveat-SemiBold.ttf');font-weight:600}@font-face{font-family:DMSans;src:url('/fonts/DMSans-Medium.ttf');font-weight:500}
+.sl{--sl-paper:#efefeb;--sl-ink:#151618;--sl-panel:#101114;--sl-panel-ink:#f4f2ee;--sl-glow:#a26272;--sl-line:rgba(255,255,255,.22);--sl-card-w:clamp(90px,15vw,210px);background:var(--sl-paper);color:var(--sl-ink);font-family:DMSans,Arial,sans-serif;font-weight:500}
+.sl section{position:relative;min-height:100svh;padding:1.5rem;overflow:hidden}.sl-spotlight{outline:none}
+.sl-panel{position:relative;min-height:calc(100svh - 3rem);padding:8rem 2rem;border-radius:2.5rem;background:var(--sl-panel);color:var(--sl-panel-ink);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:2rem;overflow:hidden;isolation:isolate}
+.sl-panel:before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(38rem 38rem at var(--sl-mx,50%) var(--sl-my,50%),color-mix(in srgb,var(--sl-glow) 22%,transparent),transparent 70%);opacity:0;transition:opacity .8s}.sl-panel.is-lit:before{opacity:1}
+.sl-panel__eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin:0}.sl-stage{position:relative;width:100%;display:flex;justify-content:center;align-items:center;z-index:1}.sl-list{display:flex;flex-direction:column;align-items:center;position:relative;z-index:1}.sl-item{width:100%;display:flex;justify-content:center;align-items:center;text-decoration:none;color:inherit;outline-offset:6px}.sl-label{display:grid;place-items:center}.sl-label span{grid-area:1/1;white-space:nowrap;transform-origin:center}.sl-label__default{font-family:Anton,sans-serif;font-size:clamp(1.6rem,6vw,8rem);text-transform:uppercase;line-height:1}.sl-label__alt{font-family:Caveat,cursive;font-weight:600;font-size:clamp(2.2rem,8vw,10.5rem);line-height:.7;letter-spacing:-.03em;transform:translateY(12%);opacity:0}
+.sl-cards{position:absolute;inset:0;z-index:2;pointer-events:none}.sl-card{position:absolute;width:var(--sl-card-w);aspect-ratio:2/3;object-fit:cover;border-radius:1rem;border:1px solid var(--sl-line);padding:5px;background:rgba(255,255,255,.06);box-shadow:0 30px 60px -28px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.3);transform:scale(0)}.sl-card--1{top:7.5%;left:7.5%}.sl-card--2{top:5%;right:7.5%}.sl-card--3{bottom:12.5%;left:12.5%}.sl-card--4{bottom:15%;right:12.5%}.sl-panel__note{font-size:13px;line-height:1.6;opacity:.5;margin:0;max-width:380px}
+.sl-outro{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:28px}.sl-outro__eyebrow{font-size:12px;letter-spacing:.16em}.sl-outro h2{font-family:Anton,sans-serif;font-size:clamp(64px,11vw,180px);text-transform:uppercase;line-height:1;margin:0;font-weight:400}.sl-outro h2 em{font-family:Caveat,cursive;font-size:1.08em;text-transform:none;font-style:normal;color:#aa352a}.sl-outro>p:not(.sl-outro__eyebrow){max-width:470px;font-size:17px;line-height:1.6;margin:0}.sl-outro__link{color:inherit;text-decoration:none;border-bottom:1px solid #888;padding:10px 0;display:flex;gap:35px;align-items:center}.sl-outro__credit{font-size:11px;opacity:.55;margin-top:30px}.sl-outro__credit a{color:inherit}
+@media(max-width:1000px){.sl section{padding:1rem}.sl-panel{padding:6rem 1rem;border-radius:1.5rem}.sl-panel__eyebrow{max-width:260px;line-height:1.5}}
+@media(hover:none),(pointer:coarse){.sl-cards{display:none}.sl-item{padding:9px 0}.sl-panel__note{display:none}}
+@media(prefers-reduced-motion:reduce){.sl-panel:before{transition:none}}
+.sl-item:focus-visible{outline:1px solid #f4f2ee88;outline-offset:8px;border-radius:6px}
+```
+
+### public/fonts/League-Gothic-OFL.md
+
+```
+	Copyright (c) 2010, Caroline Hadilaksono & Micah Rich <caroline@hadilaksono, micah@micahrich.com>, with Reserved Font Name: "League Gothic".
+
+	This Font Software is licensed under the SIL Open Font License, Version 1.1.
+	This license is copied below, and is also available with a FAQ at:
+	http://scripts.sil.org/OFL
+
+	Version 1.1 - 26 February 2007
+
+
+SIL Open Font License
+====================================================
+
+
+Preamble
+----------
+
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+Definitions
+-------------
+
+`"Font Software"` refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+`"Reserved Font Name"` refers to any names specified as such after the
+copyright statement(s).
+
+`"Original Version"` refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+`"Modified Version"` refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+`"Author"` refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+Permission & Conditions
+------------------------
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1. Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2. Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3. No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4. The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5. The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+Termination
+-----------
+
+This license becomes null and void if any of the above conditions are
+not met.
+
+
+	DISCLAIMER
+
+	THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+	EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+	MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+	OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+	COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+	INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+	DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+	FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+	OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+### public/fonts/YujiBoku-OFL.txt
+
+```
+Copyright 2021 The Yuji Project Authors (https://github.com/Kinutafontfactory/Yuji)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+### public/fonts/anton-OFL.txt
+
+```
+Copyright 2020 The Anton Project Authors (https://github.com/googlefonts/AntonFont.git)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+### public/fonts/caveat-OFL.txt
+
+```
+Copyright 2014 The Caveat Project Authors (https://github.com/googlefonts/caveat)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+### public/fonts/dmsans-OFL.txt
+
+```
+Copyright 2014 The DM Sans Project Authors (https://github.com/googlefonts/dm-fonts)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+### assets.json
+
+```json
+[
+  {
+    "file": "public/art/sakura-frame.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/art/sakura-frame.webp",
+    "bytes": 206274,
+    "sha256": "47d388035175b4479864e70bb83a20bee44b707992d9b0c9789e6861391c9ab2"
+  },
+  {
+    "file": "public/art/porcelain-waves.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/art/porcelain-waves.webp",
+    "bytes": 76984,
+    "sha256": "e81f119da81a04384bfadabb08ae3a6455e1a2682b1f241b3aa651610ed6afcf"
+  },
+  {
+    "file": "public/art/mount-fuji.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/art/mount-fuji.webp",
+    "bytes": 214426,
+    "sha256": "8568c8f93bf2d64a883169aa8315481234568ab6635cb14fc44a8fd680ea9e67"
+  },
+  {
+    "file": "public/photos/f40-01.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-01.webp",
+    "bytes": 99262,
+    "sha256": "f922b79ade8a90a3ce1212db32ee0137f04b2abff5dfece3ae812c12edb0ffd9"
+  },
+  {
+    "file": "public/photos/f40-02.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-02.webp",
+    "bytes": 205000,
+    "sha256": "d517c3cf88e6570bad6bbdaff00a263f7ec3f34462d63ed190b30f6547583ae1"
+  },
+  {
+    "file": "public/photos/f40-03.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-03.webp",
+    "bytes": 145652,
+    "sha256": "f3ac4a6809d710d3cd6069a063df0e277801d06ed58216b9e6976aa085199820"
+  },
+  {
+    "file": "public/photos/f40-04.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-04.webp",
+    "bytes": 118960,
+    "sha256": "66c514c2292822c6345cae3a3405fc0db93efade3c4bccd23804401c23b8a6d0"
+  },
+  {
+    "file": "public/photos/f40-05.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-05.webp",
+    "bytes": 54048,
+    "sha256": "fa4f429bced2646ba4cb83ace8b1e994ea448b3e9a799cb1ba36609cdf6ae215"
+  },
+  {
+    "file": "public/photos/f40-06.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-06.webp",
+    "bytes": 197978,
+    "sha256": "b04efe6ce608f4a80f50eead954d5082f56f6e3f0222b09cf6de9a01a9013936"
+  },
+  {
+    "file": "public/photos/f40-07.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-07.webp",
+    "bytes": 162236,
+    "sha256": "43088b9fcd6277847f10ff9cb32c78ed02c89cf71f9ad6a0cd45bb3e1bbef924"
+  },
+  {
+    "file": "public/photos/f40-08.webp",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/photos/f40-08.webp",
+    "bytes": 189646,
+    "sha256": "feb650f24c86737407eb81315aa34713e37cac432a6e8551b96160191fc2cddb"
+  },
+  {
+    "file": "public/fonts/league-gothic.woff",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/league-gothic.woff",
+    "bytes": 19548,
+    "sha256": "9e7726e2d42ed412e308d089ecffe3fd211fb56b4b273a3caeaa2a175fba744f"
+  },
+  {
+    "file": "public/fonts/YujiBoku-Ferrari.ttf",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/YujiBoku-Ferrari.ttf",
+    "bytes": 3364,
+    "sha256": "267743f0dba428a4cd1190cf2e7091a8cd00b5a921478abca2eb392b9c85cd9c"
+  },
+  {
+    "file": "public/fonts/YujiBoku-Hayate.ttf",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/YujiBoku-Hayate.ttf",
+    "bytes": 3216,
+    "sha256": "7a7c19281cf3335bac65f892f9a5e1b806f7c8b7c80288e91c21448cf4fd6f0a"
+  },
+  {
+    "file": "public/fonts/Anton-Regular.ttf",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/Anton-Regular.ttf",
+    "bytes": 130324,
+    "sha256": "fd9301f2837c99df2be07cc7f0be66e9470f5354d8fcf1606027c67fcd637a53"
+  },
+  {
+    "file": "public/fonts/Caveat-SemiBold.ttf",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/Caveat-SemiBold.ttf",
+    "bytes": 251816,
+    "sha256": "e5be0a7ef2eb97414937cb70d079c8c9fb2e472cf74eab5b8fe9dfa2f6fb2704"
+  },
+  {
+    "file": "public/fonts/DMSans-Medium.ttf",
+    "url": "https://media.prettysites.io/products/liberty-walk-f40/v1/fonts/DMSans-Medium.ttf",
+    "bytes": 48308,
+    "sha256": "376427b5322148d8de1e03f263bcca4935a2d60ba71d9f94f4947ab664c711ae"
+  }
+]
+```
+
+### download-assets.mjs
+
+```js
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createHash} from 'node:crypto';
+const root=import.meta.dirname;
+const assets=JSON.parse(await fs.readFile(new URL('./assets.json',import.meta.url),'utf8'));
+for(const asset of assets){
+ const target=path.resolve(root,asset.file);
+ if(!target.startsWith(path.join(root,'public')+path.sep))throw Error('Unsafe asset path');
+ const valid=bytes=>bytes&&bytes.length===asset.bytes&&createHash('sha256').update(bytes).digest('hex')===asset.sha256;
+ if(valid(await fs.readFile(target).catch(()=>null)))continue;
+ if(new URL(asset.url).origin!=='https://media.prettysites.io')throw Error('Unexpected media origin');
+ const response=await fetch(asset.url,{signal:AbortSignal.timeout(90000)});
+ if(!response.ok)throw Error(asset.url+' HTTP '+response.status);
+ const data=Buffer.from(await response.arrayBuffer());
+ if(!valid(data))throw Error('Asset verification failed: '+asset.url);
+ await fs.mkdir(path.dirname(target),{recursive:true});await fs.writeFile(target,data);
+ console.log('Ready: '+asset.file);
+}
+console.log('All '+assets.length+' assets verified');
+```
+
+
+## Apply the user’s changes before finishing
+If the user supplied new content or media, the final website must show those replacements, not the original sample content. Preserve untouched design behavior. Summarize the changes and any missing assets or untested behavior.
